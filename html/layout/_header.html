@@ -1,0 +1,61 @@
+<!-- ==================== Header Start Here ==================== -->
+<header class="header" id="header">
+  <div class="container">
+    <nav class="navbar navbar-expand-xl navbar-light">
+      <button
+        class="navbar-toggler header-button"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span id="hiddenNav"><i class="las la-bars"></i></span>
+      </button>
+
+      <div
+        class="offcanvas border-0 offcanvas-end"
+        tabindex="-1"
+        id="offcanvasDarkNavbar"
+      >
+        <div class="offcanvas-header">
+          <a class="logo navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo.png" alt="img">
+          </a>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body justify-content-start">
+          <ul class="navbar-nav nav-menu align-items-xl-center">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="all-products.html">Product</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <div class="header-top-right">
+                @@include('../layout/_lang-dropdown.html')
+                <a href="" class="track-order-btn">Track Order</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- ==================== Header End Here ==================== -->

@@ -1,0 +1,219 @@
+/* =========================================== Account Css Start =========================*/
+.account-section-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  @include md-screen {
+    height: auto;
+    padding-block: 20px;
+  }
+}
+
+.account-section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  background-color: hsl(var(--white) / 0.85);
+  width: 1320px;
+  max-width: 100%;
+  margin: auto;
+  width: 100%;
+  padding: 12px;
+
+  @include md-screen {
+    width: 550px;
+    height: auto;
+  }
+}
+
+.account-heading {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(var(--white) / 0.2);
+
+  &__title {
+    font-weight: 700;
+    color: hsl(var(--white));
+    max-width: 600px;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    max-width: 720px;
+    color: hsl(var(--white));
+    font-size: 1.025rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+}
+
+.account-left {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+
+  @include md-screen {
+    display: none;
+  }
+
+  &__thumb {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+}
+
+.account-content {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  scrollbar-width: none;
+
+  @include xl-screen {
+    width: 50%;
+  }
+
+  @include md-screen {
+    width: 100%;
+  }
+
+  @include msm-screen {
+    padding: 32px 16px;
+  }
+}
+
+.account-form {
+  width: 100%;
+  max-width: 480px;
+  margin-block: auto;
+  height: max-content;
+
+  &.lg-style {
+    max-width: 520px;
+  }
+
+  @media (min-width: 768px) {
+    --s-height: 50px;
+  }
+
+  .select2-wrapper {
+    --select-bg: hsl(var(--white));
+  }
+
+  &-header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  &-logo {
+    max-width: 184px;
+    margin-bottom: 24px;
+  }
+
+  .form--control {
+    background-color: hsl(var(--white));
+    border: 1px solid hsl(var(--black) / 0.05);
+
+    &:focus {
+      border: 1px solid hsl(var(--base));
+    }
+  }
+}
+
+.social-auth {
+  margin-top: 32px;
+  margin-inline: auto;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__item {
+    flex-grow: 1;
+  }
+
+  &__link {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: hsl(var(--heading-color));
+    border-radius: 8px;
+    transition: all linear 0.3s;
+    gap: 12px;
+    line-height: 1;
+    font-size: rem(15px);
+    background-color: hsl(var(--white));
+    box-shadow: 0px 8px 20px 0px rgba(19, 21, 21, 0.05);
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      color: hsl(var(--black));
+    }
+  }
+
+  &__divide {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-color: hsl(var(--black) / 0.1);
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      padding-inline: 16px;
+      background-color: hsl(var(--white));
+      color: hsl(var(--black));
+    }
+  }
+}
+
+.forgot-password {
+  color: hsl(var(--base));
+  font-size: rem(15px);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.account-external {
+  font-size: rem(15px);
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ============================================ Account Css End ====================================*/

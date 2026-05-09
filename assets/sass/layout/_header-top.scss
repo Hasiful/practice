@@ -1,0 +1,152 @@
+/* ================ Top Header Start Here ================ */
+
+.header-top {
+  position: relative;
+  background-color: hsl(var(--white));
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+    background-color: hsl(var(--white));
+    gap: 24px;
+  }
+
+  &-logo {
+    max-width: 148px;
+    width: 100%;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: hsl(var(--white));
+    display: none;
+  }
+
+  &:has(.header-search-form.show)::after {
+    display: block;
+  }
+}
+.track-order-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(var(--black));
+  border-left: 2px solid hsl(var(--black) / 0.1);
+  padding-left: 12px;
+  line-height: 1.15;
+}
+
+.header-search-toggle {
+  color: hsl(var(--black));
+  cursor: pointer;
+  display: none;
+
+  @include msm-screen {
+    display: block;
+  }
+}
+
+.header-search {
+  flex: 1;
+
+  @include msm-screen {
+    flex: unset;
+  }
+
+  &-form {
+    margin-inline: auto;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+
+    @include msm-screen {
+      position: absolute;
+      width: 90%;
+      left: 50%;
+      top: -100%;
+      transform: translate(-50%, -50%);
+      transition: all linear 0.3s;
+      z-index: 2;
+
+      &.show {
+        top: 50%;
+      }
+    }
+  }
+
+  &-input {
+    width: 100%;
+    padding: 9px 16px;
+    padding-right: 80px;
+    font-size: 1rem;
+    color: hsl(var(--black));
+    border: 1px solid hsl(var(--black) / 0.15);
+    outline: none;
+    border-radius: inherit;
+
+    @include msm-screen {
+      padding-inline: 48px;
+    }
+
+    &::placeholder {
+      color: hsl(var(--black) / 0.3);
+    }
+
+    &:focus {
+      border-color: hsl(var(--base));
+      box-shadow: 0px 4px 10px hsl(var(--base) / 0.1) !important;
+    }
+  }
+
+  &-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    color: hsl(var(--black));
+    cursor: pointer;
+    height: 100%;
+    padding-inline: 12px;
+
+    svg {
+      display: flex;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: hsl(var(--black));
+    cursor: pointer;
+    height: 100%;
+    padding-inline: 12px;
+    display: none;
+
+    svg {
+      display: flex;
+      width: 20px;
+      height: 20px;
+    }
+
+    @include msm-screen {
+      display: block;
+    }
+  }
+}
+
+/* ================ Top Header End Here ================ */

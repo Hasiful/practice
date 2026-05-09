@@ -1,0 +1,67 @@
+/* ====================== Breadcrumb Css Start ==================== */
+.breadcrumb {
+  --inner-p: 80px;
+  --top-gap: 72px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding-block: calc(var(--top-gap) + var(--inner-p)) var(--inner-p);
+  margin-bottom: 0;
+
+  @include md-screen {
+    --inner-p: 60px;
+    --top-gap: 50px;
+  }
+
+  @include sm-screen {
+    --inner-p: 40px;
+    --top-gap: 30px;
+  }
+
+  @include msm-screen {
+    --inner-p: 32px;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    img {
+      object-position: bottom;
+    }
+  }
+
+  &__title {
+    color: hsl(var(--black));
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    padding: 0 5px;
+    color: hsl(var(--black));
+
+    &-text {
+      color: hsl(var(--black));
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    color: hsl(var(--black));
+
+    &:hover,
+    &:focus {
+      color: hsl(var(--black));
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ====================== Breadcrumb Css End ==================== */

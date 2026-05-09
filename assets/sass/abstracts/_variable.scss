@@ -1,0 +1,14 @@
+
+:root {
+  --body-font: 'Noto Sans Mono', monospace;
+  --heading-font: "Stack Sans Headline", sans-serif;
+
+
+  @include colorVariable(--base, #6d28d9, 10);
+
+
+  @include colorVariable(--white, #ffffff);
+  @include colorVariable(--black, #000);
+
+}
+

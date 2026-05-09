@@ -1,0 +1,39 @@
+/* ================================= Tab Css Start =========================== */
+
+.custom--tab {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid hsl(var(--black) / 0.075);
+  position: relative;
+  gap: 8px;
+  flex-wrap: nowrap;
+
+  .nav-item {
+    .nav-link {
+      transition: all linear 0.3s;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0px;
+      border: 0;
+      line-height: 1;
+      font-size: rem(16px);
+      color: hsl(var(--heading-color));
+      padding: 8px 16px;
+      line-height: 1.2;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+
+      &.active {
+        color: hsl(var(--black));
+        font-weight: 500;
+        border-bottom-color: hsl(var(--black));
+      }
+
+      &:hover {
+        color: hsl(var(--base));
+      }
+    }
+  }
+}
+
+/* ================================= Tab Css End =========================== */

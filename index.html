@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Nothing</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontasosome -->
+    <link rel="stylesheet" href="assets/css/fontasosome.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- select2 -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- wow -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- player css -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.8.3/plyr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+
+  <body>
+    <!--==================== Preloader Start ====================-->
+<div class="preloader">
+    <div class="loader-p"></div>
+</div>
+<!--==================== Preloader End ====================-->
+    <!--==================== Overlay Start ====================-->
+    <div class="body-overlay"></div>
+    <!--==================== Overlay End ====================-->
+
+    <!--==================== Sidebar Overlay End ====================-->
+    <div class="sidebar-overlay"></div>
+    <!--==================== Sidebar Overlay End ====================-->
+
+<!-- ==================== Header Start Here ==================== -->
+<header class="header" id="header">
+  <div class="container">
+    <nav class="navbar navbar-expand-xl navbar-light">
+      <button
+        class="navbar-toggler header-button"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span id="hiddenNav"><i class="las la-bars"></i></span>
+      </button>
+
+      <div
+        class="offcanvas border-0 offcanvas-end"
+        tabindex="-1"
+        id="offcanvasDarkNavbar"
+      >
+        <div class="offcanvas-header">
+          <a class="logo navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo.png" alt="img">
+          </a>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body justify-content-start">
+          <ul class="navbar-nav nav-menu align-items-xl-center">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="all-products.html">Product</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <div class="header-top-right">
+                <div class="dropdown lang-box">
+  <button class="lang-box-btn" data-bs-toggle="dropdown">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      aria-hidden="true"
+      role="img"
+      width="20px"
+      height="20px"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M18.234 2.5A3.266 3.266 0 0121.5 5.766v8.906a3.266 3.266 0 01-3.266 3.265h-1.289c-.34 0-.67.118-.934.332l-3.747 3.033a.892.892 0 01-1.451-.693v-2.375a.297.297 0 00-.297-.297h-4.75A3.266 3.266 0 012.5 14.673V5.766A3.266 3.266 0 015.766 2.5zM5.491 3.938c-.82 0-1.528 1.008-1.528 1.828v8.99c0 .82.665 1.604 1.484 1.604h5.046c1.148 0 1.98.871 1.98 2.019v.81l2.417-2.16c.581-.471 1.284-.669 2.032-.669h1.539c.82 0 1.507-.868 1.507-1.688l.044-9.293c0-.82-.665-1.441-1.485-1.441zM12 6.063a.89.89 0 01.824.553l2.672 6.532a.89.89 0 11-1.648.673l-.891-2.177h-1.914l-.89 2.177a.89.89 0 11-1.65-.673l2.673-6.532A.89.89 0 0112 6.063m-.374 4.156h.748L12 9.306z"
+      ></path>
+    </svg>
+    <span class="text">English</span>
+    <span class="icon">
+      <i class="fas fa-angle-down"></i>
+    </span>
+  </button>
+  <ul class="dropdown-menu">
+    <li class="lang-box-item" data-code="en">
+      <a href="" class="lang-box-link">
+        <div class="thumb">
+          <img src="assets/images/flags/us.png" alt="usa">
+        </div>
+        <span class="text">Enlish</span>
+      </a>
+    </li>
+    <li class="lang-box-item selected" data-code="hn">
+      <a href="" class="lang-box-link">
+        <div class="thumb">
+          <img src="assets/images/flags/bd.png" alt="bd">
+        </div>
+        <span class="text">Bangla</span>
+      </a>
+    </li>
+    <li class="lang-box-item" data-code="es">
+      <a href="" class="lang-box-link">
+        <div class="thumb">
+          <img src="assets/images/flags/sp.png" alt="Spanish">
+        </div>
+        <span class="text">Spanish</span>
+      </a>
+    </li>
+    <li class="lang-box-item" data-code="es">
+      <a href="" class="lang-box-link">
+        <div class="thumb">
+          <img src="assets/images/flags/sa.png" alt="Spanish">
+        </div>
+        <span class="text">Arabic</span>
+      </a>
+    </li>
+    <li class="lang-box-item" data-code="es">
+      <a href="" class="lang-box-link">
+        <div class="thumb">
+          <img src="assets/images/flags/pak.png" alt="Spanish">
+        </div>
+        <span class="text">Urdu</span>
+      </a>
+    </li>
+    <li class="lang-box-item" data-code="es">
+      <a href="" class="lang-box-link">
+        <div class="thumb">
+          <img src="assets/images/flags/fr.png" alt="Spanish">
+        </div>
+        <span class="text">French</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+                <a href="" class="track-order-btn">Track Order</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- ==================== Header End Here ==================== -->
+
+<main>
+  <!--========================== Banner Section Start ==========================-->
+<section class="banner-section">
+  <div class="container">
+
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique culpa laborum iste voluptates esse quisquam delectus natus sapiente quod totam est nihil alias ducimus rerum labore corrupti, distinctio, unde ipsum?</h1>
+
+    The first chance to get phone (1). Limited edition of the first 100 units, laser engraved from 1 to 100.
+Live now. Exclusively available on StockX.
+  </div>
+</section>
+<!--========================== Banner Section End ==========================-->
+
+</main>
+<footer class="footer">
+  <div class="footer-bg">
+    <img
+      class="fit-image"
+      src="assets/images/thumbs/footer-bg-dark.png"
+      alt="footer-bg">
+  </div>
+
+  <div class="footer-top py-60">
+    <div class="container">
+      <div class="mb-60">
+        <div
+          class="row g-4 align-items-center justify-content-between flex-wrap-reverse"
+        >
+          <div class="col-lg-6 col-xl-5">
+            <div class="footer-item">
+              <a class="footer-item__logo" href="index.html">
+                <img src="assets/images/logo/logo-white.png" alt="img">
+              </a>
+
+              <p class="footer-item__desc">
+                Essentia brings live shopping, product discovery, and instant
+                checkout together in one seamless experience. Watch live product
+                shows, connect with hosts, and shop trending finds in real time.
+              </p>
+
+              <ul class="social-list mt-4">
+                <li class="social-list__item">
+                  <a
+                    href="https://www.facebook.com/"
+                    class="social-list__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a
+                    href="https://www.instagram.com/"
+                    class="social-list__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a
+                    href="https://www.x.com/"
+                    class="social-list__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a
+                    href="https://www.linkedin.com/"
+                    class="social-list__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-5">
+            <div class="footer-newsletter">
+              <h2 class="footer-newsletter-title">Stay Updated</h2>
+              <p class="footer-newsletter-desc">
+                Get updates on upcoming live shows, featured sellers, exclusive
+                deals, and new arrivals delivered to your inbox.
+              </p>
+              <form class="newsletter-form" action="#">
+                <input
+                  class="newsletter-form-input"
+                  type="email"
+                  placeholder="Enter your email address"
+                  aria-label="Email address">
+                <button class="newsletter-form-btn" type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row gy-4 gy-sm-5 justify-content-between">
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-item">
+            <h2 class="footer-item__title h6">Quick Links</h2>
+            <ul class="footer-menu">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="index.html">Home</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="blog.html">Blog</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-item">
+            <h2 class="footer-item__title h6">Shop With Us</h2>
+            <ul class="footer-menu">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="index.html">Live Events</a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="index.html">
+                  Trending Products
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="login.html">
+                  Seller Login
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-item">
+            <h2 class="footer-item__title h6">Support</h2>
+            <ul class="footer-menu">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="contact.html">
+                  Help Center
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="contact.html">
+                  Order Support
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="contact.html">
+                  Returns & Refunds
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="footer-item">
+            <h3 class="footer-item__title h6">Contact Info</h3>
+            <ul class="footer-contact">
+              <li class="footer-contact__item">
+                <div class="icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="content">
+                  <p>33 Rose Street, Covent Garden, London, UK</p>
+                </div>
+              </li>
+              <li class="footer-contact__item">
+                <div class="icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="content">
+                  <a href="mailto:support@essentia.com" class="link">
+                    support@essentia.com
+                  </a>
+                </div>
+              </li>
+              <li class="footer-contact__item">
+                <div class="icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="content">
+                  <a href="tel:+4402035550199" class="link">
+                    +44 020 3555 0199
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-bottom__text mb-0">
+      Copyright 2026 Essentia. Live shopping made simple, social, and instant.
+    </p>
+  </div>
+</footer>
+ <!-- Jquery js -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap Bundle Js -->
+<script src="assets/js/boostrap.bundle.min.js"></script>
+<!-- Slick js -->
+<script src="assets/js/slick.min.js"></script>
+<!-- Odometer js -->
+<script src="assets/js/odometer.min.js"></script>
+<!-- Viewport js -->
+<script src="assets/js/viewport.jquery.js"></script>
+<!-- select2 -->
+<script src="assets/js/select2.min.js"></script>
+<!-- range slider -->
+<script src="assets/js/jquery-ui.min.js"></script>
+<!-- wow -->
+<script src="assets/js/wow.min.js"></script>
+<!-- player js -->
+<script src="https://cdn.plyr.io/3.8.3/plyr.js"></script>
+<!-- Swiper js -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- main js -->
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>

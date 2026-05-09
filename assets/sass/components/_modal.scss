@@ -1,0 +1,81 @@
+/* ================================= Modal Css Start =========================== */
+.custom--modal {
+  .modal-header {
+    border-bottom: 1px solid hsl(var(--border-color) / .5);
+    padding: 16px;
+
+    .btn-close {
+      background-image: none;
+      font-size: 1.25rem;
+      transition: all linear 0.3s;
+      color: hsl(var(--text-color)) !important;
+      padding: 0;
+      background-color: transparent;
+      height: 30px;
+      width: 30px;
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      border: 1px solid hsl(var(--text-color));
+
+      i {
+        display: flex;
+      }
+
+      &:hover {
+        color: hsl(var(--dark)) !important;
+        border-color: hsl(var(--dark));
+      }
+
+      &:focus,
+      &:active {
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  .input-group {
+    background-color: hsl(var(--section-bg)) !important;
+
+    .form--control {
+      background-color: transparent !important;
+    }
+  }
+
+  .modal-content {
+    background-color: hsl(var(--white));
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-top: 1px solid hsl(var(--border-color) / 0.5);
+    justify-content: flex-end;
+  }
+}
+
+.modal .modal-dialog {
+  transition: transform 0.3s ease-out !important;
+  transform: scale(0.9) !important;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1) !important;
+}
+
+.modal-dialog-scrollable .modal-content {
+  min-height: 500px;
+}
+
+/* ================================= Modal Css End =========================== */

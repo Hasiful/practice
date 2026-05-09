@@ -1,0 +1,36 @@
+<!-- ==================== Header Top Start Here ==================== -->
+<div class="header-top">
+  <div class="container">
+    <div class="header-top-wrapper">
+      <a href="index.html" class="header-top-logo">
+        <img src="assets/images/logo/logo.png" alt="Logo" >
+      </a>
+
+      <div class="header-search">
+        <div class="header-search-toggle">
+          @@include('../svg/searchIcon.html')
+        </div>
+        <form class="header-search-form">
+          <button type="button" class="header-search-close">
+            @@include('../svg/closeIcon.html')
+          </button>
+          <input
+            type="text"
+            class="header-search-input"
+            placeholder="Search products..."
+          >
+
+          <button class="header-search-btn">
+            @@include('../svg/searchIcon.html')
+          </button>
+        </form>
+      </div>
+
+      <div class="header-top-right d-none d-lg-flex">
+        @@include('../layout/_lang-dropdown.html')
+        <a href="" class="track-order-btn">Track Order</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ==================== Header Top End Here ==================== -->
