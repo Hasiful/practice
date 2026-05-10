@@ -1,7 +1,215 @@
 /* =========================== Banner Section Start Here ========================= */
 .banner-section {
-  position: relative;
-  z-index: 1;
-  background-color: hsl(var(--base) / 0.05);
+  --inner-p: 80px;
+  background-color: hsl(var(--white) / .025);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    hsl(var(--white)) 1px,
+    transparent 0
+  );
+  background-size: 200px 200px;
   overflow: hidden;
+}
+
+.banner-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 60px;
+  justify-content: center;
+}
+
+.banner-thumb {
+  flex: 1;
+  transform: scale(1.25);
+  transform-origin: bottom left;
+}
+
+/* =========================== Banner Section End Here ========================= */
+
+.banner-slider {
+  width: 100%;
+  padding-block: var(--inner-p);
+  width: 764px;
+  margin: 0;
+
+  @include xl-screen {
+    width: 640px;
+  }
+
+  @include sm-screen {
+    width: 540px;
+    margin-inline: auto;
+  }
+
+  @include msm-screen {
+    width: 385px;
+  }
+
+  @include xsm-screen {
+    width: 300px;
+  }
+}
+
+.banner-slider .swiper-slide {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+
+
+  @include xl-screen {
+    width: 352px;
+  }
+
+  @include sm-screen {
+    width: 312px;
+  }
+
+  @include msm-screen {
+    width: 290px;
+  }
+
+  @include xsm-screen {
+    width: 210px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.banner-slider .swiper-button-next,
+.banner-slider .swiper-button-prev {
+  position: unset;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: hsl(var(--white) / .1);
+  color: hsl(var(--white));
+  font-size: 0.75rem;
+  margin: 0;
+
+  @include msm-screen {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.banner-slider {
+  .swiper-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 32px;
+  }
+
+  .swiper-pagination {
+    position: unset;
+    max-width: 200px;
+    border-radius: 999px;
+  }
+
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: hsl(var(--base));
+    border-radius: 999px;
+  }
+
+  .swiper-pagination-progressbar {
+    background: rgb(255 255 255 / 25%);
+  }
+}
+
+.banner-section {
+  .swiper-3d .swiper-slide-shadow-left,
+  .swiper-3d .swiper-slide-shadow-right {
+    background: transparent;
+  }
+}
+
+.banner-product {
+  background-color: #1d1d1d;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 0 6px hsl(var(--white) / 0.1);
+  width: 100%;
+
+    background-color: hsl(var(--black) / .05);
+    backdrop-filter: blur(20px);
+
+  &-thumb {
+    padding: 60px;
+    height: 400px;
+    
+    @include xl-screen{
+      padding: 40px;
+      height: 320px;
+    }
+    @include md-screen{
+      padding: 32px;
+      height: 280px;
+    }
+    @include msm-screen{
+      padding: 24px;
+      height: 260px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+
+  &-price {
+    margin-bottom: 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1;
+    color: hsl(var(--white));
+
+    .currency {
+      color: hsl(var(--white) / 0.65);
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+  }
+
+  &-name {
+    font-size: 0.9125rem;
+    color: hsl(var(--white));
+  }
+
+  &-content {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(var(--white) / .02);
+    border-top: 4px solid hsl(var(--white) / 0.025);
+  }
+
+  &-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: hsl(var(--white));
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    flex-shrink: 0;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

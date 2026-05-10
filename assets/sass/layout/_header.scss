@@ -1,16 +1,12 @@
 /* ============= Header Start Here ======================= */
-.navbar-brand {
-  padding-top: 0;
-  padding-bottom: 0;
 
-  &.logo {
-    img {
-      max-width: 140px;
-
-      @include md-screen {
-        max-width: 124px;
-      }
-    }
+.logo-text {
+  color: hsl(var(--white));
+  font-size: 30px;
+  text-transform: uppercase;
+  
+  @include lg-screen{
+    font-size: 24px;
   }
 }
 
@@ -107,7 +103,7 @@
   @include lg-screen {
     overflow: hidden;
     padding-block: 20px;
-    border-bottom: 1px solid hsl(var(--black) / 0.05);
+    border-bottom: 1px solid hsl(var(--white) / 0.05);
 
     .nav-menu {
       .nav-item {
@@ -148,7 +144,7 @@
         margin: 0 !important;
         font-size: rem(16px);
         font-weight: 500;
-        color: hsl(var(--black));
+        color: hsl(var(--white));
 
         &.show {
           &[aria-expanded="true"] {
@@ -163,11 +159,6 @@
     }
   }
 
-  .sm-header {
-    display: flex;
-    align-items: center;
-  }
-
   .navbar-toggler {
     &.header-button {
       border-color: transparent;
@@ -177,7 +168,7 @@
       border-radius: 0 !important;
       transition: 0.15s ease-in-out;
       width: auto;
-      font-size: 2.125rem;
+      font-size: 1.5rem;
       order: 1;
       margin-left: 10px;
       background-color: transparent;
@@ -203,62 +194,26 @@
   align-items: center;
   justify-content: flex-end;
   gap: var(--gap);
+  flex: 1;
 
-  &-nav {
-    display: flex;
-    align-items: center;
-    gap: var(--gap);
-
-    .nav-btn {
-      color: hsl(var(--white));
-      position: relative;
-
-      .count {
-        position: absolute;
-        top: -4px;
-        right: -16px;
-        background-color: hsl(var(--base));
-        color: hsl(var(--white));
-        font-size: 0.7rem;
-        height: 22px;
-        width: 22px;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-      }
-    }
+  &-item{
+    color: hsl(var(--white));
   }
-}
 
-.dropdown-menu {
-  padding: 12px;
-  border: 0;
-  box-shadow: none;
-  background-color: hsl(var(--white));
-  border-radius: 12px;
-  display: unset !important;
-  visibility: hidden;
-  opacity: 0;
-  position: absolute !important;
-  border: 1px solid hsl(var(--black) / 0.03);
-  box-shadow:
-    0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
-
-  &.show {
-    visibility: visible;
-    opacity: 1;
-  }
 }
 
 .header {
   .offcanvas-header {
-    background-color: hsl(var(--white) / 0.05);
+    background-color: hsl(var(--black) / 0.05);
   }
 
   .offcanvas {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--black));
   }
+}
+
+.btn-close {
+    --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
 
 /* ================================= Header Css End =========================== */

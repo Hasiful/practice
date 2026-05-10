@@ -1,0 +1,44 @@
+<section class="all-product my-60">
+  <div class="container">
+    <div class="section-heading wow fadeInUp" data-wow-delay="0.2s">
+      <div class="section-heading-content">
+        <h2 class="section-heading-title">Best Products</h2>
+      </div>
+      <a href="" class="view-btn">
+        Explore All
+        <span class="icon">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+    <div class="best-product-wrapper">
+      @@for(let i = 12; i > 6; i--){
+      <div class="product-card wow fadeInUp" data-wow-delay="0.3s">
+        <a href="product-details.html" class="product-card-thumb">
+          <img src="assets/images/products/`+i+`.png" alt="img">
+        </a>
+        <div class="product-card-body">
+          <span class="product-card-category">By Nothing</span>
+
+          <a href="product-details.html" class="product-card-title">
+            New Women's Square Collar Pleated Long Dresses
+          </a>
+
+          <div class="product-card-footer">
+            <div class="product-card-rating">
+              <span class="icon">
+                <i class="fas fa-star"></i>
+              </span>
+              <span class="count">(4.5)</span>
+            </div>
+            <div class="product-card-price">
+              <span class="old-price">$524</span>
+              <span class="offer-price">$284</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

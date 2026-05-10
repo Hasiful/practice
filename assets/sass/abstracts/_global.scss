@@ -30,26 +30,6 @@
     }
   }
 
-  &[variant="light"] {
-    .section-heading {
-      &-name {
-        color: hsl(var(--white));
-
-        .text {
-          --overlay-bg: #000036;
-        }
-      }
-
-      &-title {
-        color: hsl(var(--white));
-      }
-
-      &-desc {
-        color: #d1d5dc;
-      }
-    }
-  }
-
   &-subtitle {
     --extra-x-fs: 180px;
     font-size: var(--extra-x-fs);
@@ -110,18 +90,10 @@
       }
     }
   }
+}
 
-  &[space-bottom="true"] {
-    margin-bottom: -30px;
-
-    @include lg-screen {
-      margin-bottom: -10px;
-    }
-
-    @include xsm-screen {
-      margin-bottom: -6px;
-    }
-  }
+.view-btn{
+  color: hsl(var(--white));
 }
 
 /* ====================== Section Heading End ==================== */
