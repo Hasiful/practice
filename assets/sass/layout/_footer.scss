@@ -4,80 +4,68 @@
   position: relative;
   z-index: 1;
   margin-top: auto;
-  background-color: hsl(var(--black));
+
+  &::after{
+    content: "";
+    background-color: hsl(var(--white)/0.025);
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--white)) 1px, transparent 0);
+    background-size: 150px 150px;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
 
   &-bg {
     position: absolute;
     inset: 0;
     z-index: -1;
-    opacity: 0.1;
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-fit: bottom;
+    }
   }
 }
 
-.footer-item__logo {
-  margin-bottom: 18px;
-}
-
-.footer-item__logo img {
-  max-width: 164px;
-  object-fit: cover;
-  display: block;
-}
-
-.footer-item__title {
-  margin-bottom: 18px;
-  font-size: 1.0625rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: hsl(var(--white));
-  line-height: 1.2;
-}
-
-.footer-item__desc {
-  font-weight: 400;
-  line-height: 165%;
-  color: hsl(var(--white) / 0.72);
-
-  @include sm-screen {
-    font-size: 0.875rem;
-  }
+.footer-menu{
+  margin-bottom: 60px;
 }
 
 .footer-menu__item:not(:last-child) {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .footer-menu__link {
-  font-size: 1rem;
+  font-size: 2.5rem;
   line-height: 150%;
+  font-family: var(--heading-font);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   line-clamp: 1;
   -webkit-box-orient: vertical;
-  color: hsl(var(--white) / 0.65);
+  color: hsl(var(--white));
   transition: all linear 0.2s;
+  text-align: center;
+  text-transform: uppercase;
 
   &:hover {
     color: hsl(var(--white));
     text-decoration: none;
     padding-left: 3px;
   }
-}
 
-@media (max-width: 767px) {
-  .footer-menu__link {
-    font-size: 0.875rem;
+  
+  @include lg-screen {
+    font-size: 2rem;
   }
-
-  .footer-item__title {
-    margin-bottom: 12px;
-    font-size: 1rem;
-  }
-
-  .footer-menu__item:not(:last-child) {
-    margin-bottom: 12px;
+  
+  @include msm-screen {
+    font-size: 1.75rem;
   }
 }
 
@@ -121,8 +109,10 @@
 .footer-newsletter {
   border-radius: 12px;
   overflow: hidden;
-  background-color: hsl(var(--base) / 0.4);
+  background-color: hsl(var(--white) / 0.02);
   padding: 24px;
+  backdrop-filter: blur(10px);
+  text-align: center;
 
   &-title {
     font-size: 1.75rem;
@@ -200,8 +190,18 @@
   border-top: 1px solid hsl(var(--white) / 0.1);
 
   &__text {
-    text-align: center;
-    color: hsl(var(--white) / 0.58);
+    color: hsl(var(--white));
+    font-size: 0.875rem;
+  }
+}
+
+.footer-social{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  a{
+    color: hsl(var(--white));
     font-size: 0.875rem;
   }
 }

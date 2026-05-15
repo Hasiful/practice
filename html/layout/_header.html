@@ -13,7 +13,7 @@
         <span id="hiddenNav"><i class="las la-bars"></i></span>
       </button>
       
-      <a  href="index.html">
+      <a  href="index.html" class="d-xl-none">
         <h2 class="logo-text">Nothing (R)</h2>
       </a>
 
@@ -34,12 +34,23 @@
           ></button>
         </div>
         <div class="offcanvas-body justify-content-center">
-          <ul class="navbar-nav nav-menu align-items-xl-center">
+          <ul class="navbar-nav w-100 nav-menu align-items-xl-center">
+          <li class="nav-item d-none d-xl-block">
+                <a href="#" class="header-right-item">
+                  @@include('../svg/_userIcon.html')
+                </a>
+            </li>
             <li class="nav-item active">
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="all-products.html">OFFERS</a>
+            </li>
+
+            <li class="logo-view">
+              <a  href="index.html" class="d-none d-xl-block">
+                <h2 class="logo-text">Nothing (R)</h2>
+              </a>
             </li>
 
             <li class="nav-item">
@@ -49,15 +60,16 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">PHONES</a>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">PHONES</a>
+            <li class="nav-item d-none d-xl-block">
+                <a href="#" class="header-right-item">
+                  @@include('../svg/bagIcon.html')
+                </a>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="header-right">
+      <div class="header-right d-xl-none">
         <a href="#" class="header-right-item">
           @@include('../svg/bagIcon.html')
         </a>

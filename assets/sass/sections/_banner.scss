@@ -1,14 +1,17 @@
 /* =========================== Banner Section Start Here ========================= */
 .banner-section {
   --inner-p: 80px;
-  background-color: hsl(var(--white) / .025);
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    hsl(var(--white)) 1px,
-    transparent 0
-  );
-  background-size: 200px 200px;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: hsl(var(--black) / .5);
+    z-index: -1;
+  }
 }
 
 .banner-wrapper {
@@ -28,7 +31,7 @@
 
 .banner-slider {
   width: 100%;
-  padding-block: var(--inner-p);
+  padding-block: calc(var(--inner-p) + var(--header-h)) var(--inner-p);
   width: 764px;
   margin: 0;
 

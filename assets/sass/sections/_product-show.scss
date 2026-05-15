@@ -1,21 +1,20 @@
 .product-show {
   min-height: 100dvh;
   position: relative;
-  z-index: 1;
-    background-color: #16161682;
-    background-image: radial-gradient(
-    circle at 1px 1px,
-    hsl(var(--white)) 1px,
-    transparent 0
-  );
-  background-size: 200px 200px;
   overflow: hidden;
+  z-index: 1;
 
   &-bg{
+    position: absolute;
+    inset: 0;
+  }
+
+  &::after{
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
+    background-color: hsl(var(--black) / .5);
   }
 }
 

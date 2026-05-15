@@ -1,5 +1,20 @@
 /* ============= Header Start Here ======================= */
 
+
+  .navbar{
+    padding: 4px 24px;
+    background-color: hsl(var(--white)/0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    max-width: 1000px;
+    width: 100%;
+    margin-inline: auto;
+
+    @include lg-screen{
+      padding: 16px;
+    }
+  }
+
 .logo-text {
   color: hsl(var(--white));
   font-size: 30px;
@@ -10,13 +25,21 @@
   }
 }
 
+.logo-view{
+  flex: 1;
+  text-align: center;
+}
+
 .header {
   z-index: 999;
-  background-color: hsl(var(--black));
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+
 
   &.fixed-header {
-    position: sticky;
-    top: 0;
     transition: 0.3s linear;
     animation: slide-down 0.8s;
     width: 100%;
@@ -39,10 +62,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.navbar {
-  padding: 0 !important;
 }
 
 /* ========================= Desktop Device Start ========================= */
@@ -102,8 +121,6 @@
 .header {
   @include lg-screen {
     overflow: hidden;
-    padding-block: 20px;
-    border-bottom: 1px solid hsl(var(--white) / 0.05);
 
     .nav-menu {
       .nav-item {
@@ -194,12 +211,14 @@
   align-items: center;
   justify-content: flex-end;
   gap: var(--gap);
-  flex: 1;
 
-  &-item{
-    color: hsl(var(--white));
-  }
+  @include lg-screen{
+    flex: 1;
+  }  
+}
 
+.header-right-item{
+  color: hsl(var(--white));
 }
 
 .header {
@@ -215,5 +234,7 @@
 .btn-close {
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
+
+
 
 /* ================================= Header Css End =========================== */

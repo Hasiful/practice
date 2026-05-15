@@ -1346,6 +1346,23 @@ button:focus {
 
 /* ================================= Button Css End =========================== */
 /* ============= Header Start Here ======================= */
+.navbar {
+    padding: 4px 24px;
+    background-color: hsl(var(--white)/0.05);
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    max-width: 1000px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+@media screen and (max-width: 1199px) {
+    .navbar {
+        padding: 16px;
+    }
+}
+
 .logo-text {
     color: hsl(var(--white));
     font-size: 30px;
@@ -1358,14 +1375,23 @@ button:focus {
     }
 }
 
+.logo-view {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+
 .header {
     z-index: 999;
-    background-color: hsl(var(--black));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
 }
 
 .header.fixed-header {
-    position: sticky;
-    top: 0;
     -webkit-transition: 0.3s linear;
     transition: 0.3s linear;
     -webkit-animation: slide-down 0.8s;
@@ -1406,11 +1432,6 @@ button:focus {
         transform: translateY(0);
     }
 }
-
-.navbar {
-    padding: 0 !important;
-}
-
 /* ========================= Desktop Device Start ========================= */
 @media (min-width: 1200px) {
     .header .offcanvas-body {
@@ -1463,8 +1484,6 @@ button:focus {
 @media screen and (max-width: 1199px) {
     .header {
         overflow: hidden;
-        padding-block: 20px;
-        border-bottom: 1px solid hsl(var(--white)/0.05);
     }
 
     .header .nav-menu .nav-item {
@@ -1567,9 +1586,14 @@ button:focus {
     -ms-flex-pack: end;
     justify-content: flex-end;
     gap: var(--gap);
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+}
+
+@media screen and (max-width: 1199px) {
+    .header-right {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
 }
 
 .header-right-item {
@@ -1796,64 +1820,57 @@ button:focus {
     position: relative;
     z-index: 1;
     margin-top: auto;
-    background-color: hsl(var(--black));
+}
+
+.footer::after {
+    content: "";
+    background-color: hsl(var(--white)/0.025);
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--white)) 1px, transparent 0);
+    background-size: 150px 150px;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
 }
 
 .footer-bg {
     position: absolute;
     inset: 0;
     z-index: -1;
-    opacity: 0.1;
 }
 
-.footer-item__logo {
-    margin-bottom: 18px;
-}
-
-.footer-item__logo img {
-    max-width: 164px;
+.footer-bg img {
+    height: 100%;
+    width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    display: block;
+    -o-object-fit: bottom;
+    object-fit: bottom;
 }
 
-.footer-item__title {
-    margin-bottom: 18px;
-    font-size: 1.0625rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    color: hsl(var(--white));
-    line-height: 1.2;
-}
-
-.footer-item__desc {
-    font-weight: 400;
-    line-height: 165%;
-    color: hsl(var(--white)/0.72);
-}
-
-@media screen and (max-width: 767px) {
-    .footer-item__desc {
-        font-size: 0.875rem;
-    }
+.footer-menu {
+    margin-bottom: 60px;
 }
 
 .footer-menu__item:not(:last-child) {
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 }
 
 .footer-menu__link {
-    font-size: 1rem;
+    font-size: 2.5rem;
     line-height: 150%;
+    font-family: var(--heading-font);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     line-clamp: 1;
     -webkit-box-orient: vertical;
-    color: hsl(var(--white)/0.65);
+    color: hsl(var(--white));
     -webkit-transition: all linear 0.2s;
     transition: all linear 0.2s;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .footer-menu__link:hover {
@@ -1862,18 +1879,15 @@ button:focus {
     padding-left: 3px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 1199px) {
     .footer-menu__link {
-        font-size: 0.875rem;
+        font-size: 2rem;
     }
+}
 
-    .footer-item__title {
-        margin-bottom: 12px;
-        font-size: 1rem;
-    }
-
-    .footer-menu__item:not(:last-child) {
-        margin-bottom: 12px;
+@media screen and (max-width: 575px) {
+    .footer-menu__link {
+        font-size: 1.75rem;
     }
 }
 
@@ -1923,8 +1937,11 @@ button:focus {
 .footer-newsletter {
     border-radius: 12px;
     overflow: hidden;
-    background-color: hsl(var(--base)/0.4);
+    background-color: hsl(var(--white)/0.02);
     padding: 24px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: center;
 }
 
 .footer-newsletter-title {
@@ -2013,8 +2030,22 @@ button:focus {
 }
 
 .footer-bottom__text {
-    text-align: center;
-    color: hsl(var(--white)/0.58);
+    color: hsl(var(--white));
+    font-size: 0.875rem;
+}
+
+.footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-social a {
+    color: hsl(var(--white));
     font-size: 0.875rem;
 }
 
@@ -2077,10 +2108,17 @@ button:focus {
 /* =========================== Banner Section Start Here ========================= */
 .banner-section {
     --inner-p: 80px;
-    background-color: hsl(var(--white)/0.025);
-    background-image: radial-gradient(circle at 1px 1px, hsl(var(--white)) 1px, transparent 0);
-    background-size: 200px 200px;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: hsl(var(--black)/0.5);
+    z-index: -1;
 }
 
 .banner-wrapper {
@@ -2109,7 +2147,7 @@ button:focus {
 /* =========================== Banner Section End Here ========================= */
 .banner-slider {
     width: 100%;
-    padding-block: var(--inner-p);
+    padding-block: calc(var(--inner-p) + var(--header-h)) var(--inner-p);
     width: 764px;
     margin: 0;
 }
@@ -2486,18 +2524,21 @@ button:focus {
 .product-show {
     min-height: 100dvh;
     position: relative;
-    z-index: 1;
-    background-color: #16161682;
-    background-image: radial-gradient(circle at 1px 1px, hsl(var(--white)) 1px, transparent 0);
-    background-size: 200px 200px;
     overflow: hidden;
+    z-index: 1;
 }
 
 .product-show-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.product-show::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
+    background-color: hsl(var(--black)/0.5);
 }
 
 .show-item {
