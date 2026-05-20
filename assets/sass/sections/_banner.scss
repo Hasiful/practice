@@ -14,6 +14,10 @@
   }
 }
 
+body:not(:has(.banner-section, .product-details)) main{
+  padding-top: var(--header-h);
+}
+
 .banner-wrapper {
   display: flex;
   align-items: flex-end;
@@ -74,7 +78,7 @@
   }
 
   @include xsm-screen {
-    width: 210px;
+    width: 218px;
   }
 
   img {
@@ -208,6 +212,10 @@
     font-size: 0.875rem;
     font-weight: 500;
     flex-shrink: 0;
+
+    @include msm-screen{
+      display: none;
+    }
 
     .icon {
       display: flex;

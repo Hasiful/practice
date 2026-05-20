@@ -51,18 +51,6 @@
     text-align: center;
   }
 
-  &-category {
-    font-size: 0.9125rem;
-    font-weight: 500;
-    padding: 2px 12px;
-    border-radius: 999px;
-    background-color: hsl(var(--base));
-    color: hsl(var(--white));
-    border: 1px solid hsl(var(--base) / 0.1);
-    margin-bottom: 10px;
-    backdrop-filter: blur(20px);
-  }
-
   &-title {
     margin-bottom: 16px;
     display: -webkit-box;
@@ -71,37 +59,11 @@
     overflow: hidden;
     font-weight: 600;
     color: hsl(var(--white));
-    font-size: 0.9125rem;
-  }
-
-  &-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  &-rating {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-
-    .icon {
-      font-size: 0.875rem;
-      color: rgb(236, 216, 1);
-      display: flex;
-    }
-
-    .count {
-      color: hsl(var(--white));
-      font-size: 0.9125rem;
-      line-height: 1;
-    }
+    font-size: 1.125rem;
   }
 
   &-price {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,7 +72,7 @@
 
     .old-price {
       text-decoration: line-through;
-      color: hsl(var(--white) / 0.2);
+      color: hsl(var(--white) / 0.5);
     }
 
     .offer-price {

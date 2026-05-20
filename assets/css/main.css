@@ -2121,6 +2121,10 @@ button:focus {
     z-index: -1;
 }
 
+body:not(:has(.banner-section, .product-details)) main {
+    padding-top: var(--header-h);
+}
+
 .banner-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2214,7 +2218,7 @@ button:focus {
 
 @media screen and (max-width: 424px) {
     .banner-slider .swiper-slide {
-        width: 210px;
+        width: 218px;
     }
 }
 
@@ -2377,6 +2381,12 @@ button:focus {
     font-weight: 500;
     -ms-flex-negative: 0;
     flex-shrink: 0;
+}
+
+@media screen and (max-width: 575px) {
+    .banner-product-btn {
+        display: none;
+    }
 }
 
 .banner-product-btn .icon {
@@ -2685,19 +2695,6 @@ button:focus {
     text-align: center;
 }
 
-.product-card-category {
-    font-size: 0.9125rem;
-    font-weight: 500;
-    padding: 2px 12px;
-    border-radius: 999px;
-    background-color: hsl(var(--base));
-    color: hsl(var(--white));
-    border: 1px solid hsl(var(--base)/0.1);
-    margin-bottom: 10px;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-}
-
 .product-card-title {
     margin-bottom: 16px;
     display: -webkit-box;
@@ -2706,52 +2703,11 @@ button:focus {
     overflow: hidden;
     font-weight: 600;
     color: hsl(var(--white));
-    font-size: 0.9125rem;
-}
-
-.product-card-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.product-card-rating {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 3px;
-}
-
-.product-card-rating .icon {
-    font-size: 0.875rem;
-    color: #ecd801;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.product-card-rating .count {
-    color: hsl(var(--white));
-    font-size: 0.9125rem;
-    line-height: 1;
+    font-size: 1.125rem;
 }
 
 .product-card-price {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2767,7 +2723,7 @@ button:focus {
 
 .product-card-price .old-price {
     text-decoration: line-through;
-    color: hsl(var(--white)/0.2);
+    color: hsl(var(--white)/0.5);
 }
 
 .product-card-price .offer-price {

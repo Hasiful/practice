@@ -423,6 +423,26 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+
+        breakpoints: {
+          0: {
+            spaceBetween: 0,
+            coverflowEffect: {
+              stretch: 180,
+              depth: 170,
+              modifier: 1,
+            },
+          },
+
+          424: {
+            spaceBetween: 60,
+            coverflowEffect: {
+              stretch: 120,
+              depth: 100,
+              modifier: 2,
+            },
+          },
+        },
     });
   }
 
