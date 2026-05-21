@@ -1,0 +1,301 @@
+@@include('../layout/_template-top.html')
+@@include('../layout/_header.html')
+<main>
+  <section class="contact-section my-60">
+    <div class="container">
+      <div class="contact-layout mb-60">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7 col-xl-8">
+            <article class="contact-form-panel">
+              <div class="contact-form-panel__header">
+                <h2 class="contact-form-panel__title h4">Send us a message</h2>
+              </div>
+
+              <form class="contact-form" action="#">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label class="form--label" for="contactFirstName">
+                      First Name
+                    </label>
+                    <input
+                      id="contactFirstName"
+                      type="text"
+                      class="form--control"
+                      placeholder="Enter your first name">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form--label" for="contactLastName">
+                      Last Name
+                    </label>
+                    <input
+                      id="contactLastName"
+                      type="text"
+                      class="form--control"
+                      placeholder="Enter your Last name">
+                  </div>
+                  <div class="col-12">
+                    <label class="form--label" for="contactEmail">
+                      Email
+                    </label>
+                    <input
+                      id="contactEmail"
+                      type="email"
+                      class="form--control"
+                      placeholder="Enter your email">
+                  </div>
+                  <div class="col-12">
+                    <label class="form--label" for="contactMessage">
+                      Message
+                    </label>
+                    <textarea
+                      id="contactMessage"
+                      class="form--control"
+                      placeholder="Enter your message"
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="contact-form__action">
+                      <button type="submit" class="btn btn--base">
+                        Send a Message
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </article>
+          </div>
+          <div class="col-lg-5 col-xl-4">
+            <aside class="contact-support">
+              <div class="contact-support__header">
+                <h3 class="contact-support__title">
+                  Hi! We are always here to help you.
+                </h3>
+              </div>
+
+              <div class="contact-support__list">
+                <div class="contact-support__item">
+                  <span class="contact-support__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M3 11a9 9 0 0 1 18 0v4a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"
+                      ></path>
+                      <path
+                        d="M3 11v4a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3"
+                      ></path>
+                      <path d="M12 20v1"></path>
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="contact-support__label">Hotline:</p>
+                    <a href="tel:+971564983456">+971 56 498 3456</a>
+                  </div>
+                </div>
+
+                <div class="contact-support__item">
+                  <span class="contact-support__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                      ></path>
+                      <path d="M8 10h8"></path>
+                      <path d="M8 7h8"></path>
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="contact-support__label">SMS / Whatsapp</p>
+                    <a href="tel:+971553436433">+971 55 343 6433</a>
+                  </div>
+                </div>
+
+                <div class="contact-support__item">
+                  <span class="contact-support__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M22 6 12 13 2 6"></path>
+                      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="contact-support__label">Email:</p>
+                    <a href="mailto:support@zalomi.com">support@zalomi.com</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-support__social">
+                <p class="contact-support__social-title">Connect with us</p>
+                <div class="contact-support__social-links">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.x.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-60">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="contact-card contact-card--tint">
+              <div class="contact-card__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 5.15 12.8 19.79 19.79 0 0 1 2.08 4.09 2 2 0 0 1 4.06 1.9h3a2 2 0 0 1 2 1.72l.38 2.66a2 2 0 0 1-.57 1.72l-1.2 1.2a16 16 0 0 0 6.13 6.13l1.2-1.2a2 2 0 0 1 1.72-.57l2.66.38A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="contact-card__title">Call Support</h3>
+              <p class="contact-card__desc">
+                For urgent order issues, delivery help, and instant customer
+                assistance.
+              </p>
+              <a class="contact-card__link" href="tel:+876765665">
+                (+876) 765 665
+              </a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="contact-card contact-card--soft">
+              <div class="contact-card__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 6 12 13 2 6"></path>
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                </svg>
+              </div>
+              <h3 class="contact-card__title">General Inquiries</h3>
+              <p class="contact-card__desc">
+                For order status, product info, and general questions.
+              </p>
+              <a class="contact-card__link" href="mailto:demo@livixo.com">
+                demo@livixo.com
+              </a>
+            </article>
+          </div>
+
+          <div class="col-md-12 col-lg-4">
+            <article class="contact-card">
+              <div class="contact-card__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="contact-card__title">Visit Our Office</h3>
+              <p class="contact-card__desc">
+                Meet our support team for business inquiries and direct help in
+                person.
+              </p>
+              <a class="contact-card__link" href="javascript:void(0)">
+                London Eye London
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map">
+        <iframe
+          title="Location map"
+          src="https://www.google.com/maps?q=London%20Eye%20London&z=12&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- Footer -->
+@@include('../layout/_footer.html') @@include('../layout/_template-bottom.html')
