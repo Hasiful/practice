@@ -2401,6 +2401,18 @@ body:not(:has(.banner-section, .product-details)) main {
     justify-content: center;
 }
 
+.policy-banner {
+    text-align: center;
+}
+
+.policy-content {
+    padding: 32px;
+    border-radius: 16px;
+    background-color: hsl(var(--white)/0.05);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
 .category-card-wrapper {
     --count: 5;
     --gap: 20px;
