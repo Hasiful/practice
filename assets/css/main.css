@@ -2413,6 +2413,27 @@ body:not(:has(.banner-section, .product-details)) main {
     backdrop-filter: blur(20px);
 }
 
+.policy-content h5 {
+    margin-bottom: 32px;
+}
+
+.policy-content p {
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.policy-content ul {
+    margin-bottom: 24px;
+    list-style: auto;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.policy-content li {
+    margin-bottom: 12px;
+    color: hsl(var(--white));
+}
+
 .category-card-wrapper {
     --count: 5;
     --gap: 20px;
