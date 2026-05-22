@@ -37,8 +37,66 @@
     <div class="loader-p"></div>
 </div>
 <!--==================== Preloader End ====================-->
-    <div class="cookie-card">
+    <div class="cookie-card" id="cookieCard" aria-hidden="true">
+  <div class="cookie-card__inner">
+    <div class="cookie-card__content">
+      <span class="cookie-card__icon" aria-hidden="true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          viewBox="0 0 26 26"
+          fill="none"
+        >
+          <path
+            d="M18.7607 2.70654C18.5681 3.35076 18.526 4.03063 18.6378 4.69399C18.7497 5.35735 19.0125 5.98616 19.4056 6.53206C19.7987 7.07796 20.3115 7.52638 20.9047 7.84278C21.4979 8.15917 22.1546 8.33525 22.8258 8.35758C22.6648 11.1664 21.4832 13.8202 19.4949 15.8101C17.5066 17.8 14.8536 18.9837 12.0449 19.1469C9.23626 19.3102 6.46296 18.4414 4.23892 16.7087C2.01488 14.976 0.494104 12.4996 -0.0389509 9.73757C-0.572006 6.97557 -0.0803045 4.11401 1.34406 1.68899C2.76842 -0.73603 5.02935 -2.55633 7.70444 -3.4244C10.3795 -4.29247 13.2804 -4.14903 15.8568 -3.02092C16.0227 -1.31245 16.4859 0.354005 17.2216 1.90752C17.6374 2.19816 18.1751 2.45056 18.7607 2.70654Z"
+            transform="translate(1 6)"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M11 7.5C11 8.32843 10.3284 9 9.5 9C8.67157 9 8 8.32843 8 7.5C8 6.67157 8.67157 6 9.5 6C10.3284 6 11 6.67157 11 7.5Z"
+            fill="currentColor"
+          />
+          <path
+            d="M15.5 12.5C15.5 13.0523 15.0523 13.5 14.5 13.5C13.9477 13.5 13.5 13.0523 13.5 12.5C13.5 11.9477 13.9477 11.5 14.5 11.5C15.0523 11.5 15.5 11.9477 15.5 12.5Z"
+            fill="currentColor"
+          />
+          <path
+            d="M8.5 13.5C8.5 14.0523 8.05228 14.5 7.5 14.5C6.94772 14.5 6.5 14.0523 6.5 13.5C6.5 12.9477 6.94772 12.5 7.5 12.5C8.05228 12.5 8.5 12.9477 8.5 13.5Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+      <div class="cookie-card__copy">
+        <h3 class="cookie-card__title">A better experience starts with cookies</h3>
+        <p class="cookie-card__text">
+          Your data, your choice. We use cookies to improve how things work here.
+        </p>
+      </div>
+    </div>
+
+    <div class="cookie-card__actions">
+      <button
+        type="button"
+        class="cookie-card__btn cookie-card__btn--ghost"
+        data-cookie-dismiss="reject"
+      >
+        Reject all
+      </button>
+      <button
+        type="button"
+        class="cookie-card__btn cookie-card__btn--solid"
+        data-cookie-dismiss="accept"
+      >
+        Accept all
+      </button>
+    </div>
+  </div>
 </div>
+
     <!--==================== Overlay Start ====================-->
     <div class="body-overlay"></div>
     <!--==================== Overlay End ====================-->

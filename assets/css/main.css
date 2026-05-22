@@ -4285,6 +4285,210 @@ body:not(:has(.banner-section, .product-details)) main {
     color: hsl(var(--white)/0.9);
 }
 
+.cookie-card {
+    position: fixed;
+    left: 32px;
+    bottom: 32px;
+    z-index: 999;
+    width: min(880px, 100% - 32px);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(24px);
+    transform: translateY(24px);
+    pointer-events: none;
+    -webkit-transition: opacity 0.45s ease, visibility 0.45s ease, -webkit-transform 0.45s ease;
+    transition: opacity 0.45s ease, visibility 0.45s ease, -webkit-transform 0.45s ease;
+    transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
+    transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease, -webkit-transform 0.45s ease;
+}
+
+.cookie-card.show {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.cookie-card.hide {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(18px);
+    transform: translateY(18px);
+    pointer-events: none;
+}
+
+@media screen and (max-width: 991px) {
+    .cookie-card {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .cookie-card {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+.cookie-card__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 18px;
+    border-radius: 22px;
+    border: 1px solid hsl(var(--white)/0.12);
+    background: -webkit-gradient(linear, left top, left bottom, from(hsl(var(--white)/0.05)), to(hsl(var(--white)/0.025))), hsl(var(--black)/0.96);
+    background: linear-gradient(180deg, hsl(var(--white)/0.05), hsl(var(--white)/0.025)), hsl(var(--black)/0.96);
+    -webkit-box-shadow: 0 18px 50px hsl(var(--black)/0.35);
+    box-shadow: 0 18px 50px hsl(var(--black)/0.35);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+}
+
+@media screen and (max-width: 767px) {
+    .cookie-card__inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        padding: 16px;
+    }
+}
+
+.cookie-card__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+.cookie-card__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border: 1px solid hsl(var(--white)/0.12);
+    background-color: hsl(var(--white)/0.04);
+    color: hsl(var(--white));
+    -webkit-box-shadow: inset 0 1px 0 hsl(var(--white)/0.05);
+    box-shadow: inset 0 1px 0 hsl(var(--white)/0.05);
+}
+
+.cookie-card__copy {
+    min-width: 0;
+}
+
+.cookie-card__title {
+    margin-bottom: 4px;
+    color: hsl(var(--white));
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    line-height: 1.2;
+}
+
+.cookie-card__text {
+    margin-bottom: 0;
+    color: hsl(var(--white)/0.66);
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.cookie-card__actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 12px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 575px) {
+    .cookie-card__actions {
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+.cookie-card__btn {
+    border: 0;
+    min-width: 116px;
+    min-height: 54px;
+    padding: 12px 24px;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, -webkit-transform 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, -webkit-transform 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.cookie-card__btn:hover {
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+}
+
+@media screen and (max-width: 575px) {
+    .cookie-card__btn {
+        min-width: 0;
+        width: 50%;
+        min-height: 50px;
+        padding-inline: 14px;
+    }
+}
+
+.cookie-card__btn--ghost {
+    border: 1px solid hsl(var(--white)/0.12);
+    background-color: hsl(var(--white)/0.05);
+    color: hsl(var(--white));
+}
+
+.cookie-card__btn--ghost:hover {
+    background-color: hsl(var(--white)/0.1);
+    color: hsl(var(--white));
+}
+
+.cookie-card__btn--solid {
+    background-color: hsl(var(--white));
+    color: hsl(var(--black));
+}
+
+.cookie-card__btn--solid:hover {
+    background-color: hsl(var(--white)/0.88);
+    color: hsl(var(--black));
+}
+
 /* ======================  Plugin Customization Start  ======================*/
 /* ======================  Select2 Start  ======================*/
 .select2-wrapper {

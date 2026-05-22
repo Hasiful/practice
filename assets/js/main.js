@@ -482,6 +482,10 @@
   // ========================= plyr js start  =====================
   function liveTv() {
     const liveTv = document.querySelector(".live-video");
+    if (!liveTv) {
+      return;
+    }
+
     new Plyr(liveTv, {
       controls: [
         "play-large",
@@ -501,6 +505,64 @@
     });
   }
   // ========================= plyr js end  =====================
+
+  // ========================= cookie card start =====================
+  function initializeCookieCard() {
+    const cookieCard = document.getElementById("cookieCard");
+
+    if (!cookieCard || window.localStorage.getItem("cookieCardDismissed")) {
+      return;
+    }
+
+    let hasScrolledOnce = false;
+    let revealTimer = null;
+
+    function revealCookieCard() {
+      cookieCard.classList.remove("hide");
+      cookieCard.classList.add("show");
+      cookieCard.setAttribute("aria-hidden", "false");
+    }
+
+    function scheduleReveal() {
+      if (hasScrolledOnce) {
+        return;
+      }
+
+      hasScrolledOnce = true;
+      revealTimer = window.setTimeout(revealCookieCard, 1000);
+      window.removeEventListener("scroll", handleFirstScroll);
+    }
+
+    function handleFirstScroll() {
+      if (window.scrollY > 0) {
+        scheduleReveal();
+      }
+    }
+
+    function dismissCookieCard() {
+      if (revealTimer) {
+        window.clearTimeout(revealTimer);
+      }
+
+      cookieCard.classList.remove("show");
+      cookieCard.classList.add("hide");
+      cookieCard.setAttribute("aria-hidden", "true");
+      window.localStorage.setItem("cookieCardDismissed", "true");
+
+      window.setTimeout(function () {
+        cookieCard.remove();
+      }, 450);
+    }
+
+    window.addEventListener("scroll", handleFirstScroll, { passive: true });
+
+    cookieCard.addEventListener("click", function (event) {
+      if (event.target.closest("[data-cookie-dismiss]")) {
+        dismissCookieCard();
+      }
+    });
+  }
+  // ========================= cookie card end =====================
 
   // ==========================================
   //      Start Document Ready function
@@ -522,6 +584,7 @@
     searchToggle();
     initRangeSlider();
     liveTv();
+    initializeCookieCard();
   });
 
   // ========================= Preloader Js Start =====================
