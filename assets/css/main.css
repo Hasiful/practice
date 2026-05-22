@@ -4444,9 +4444,9 @@ body:not(:has(.banner-section, .product-details)) main {
     border: 0;
     min-width: 116px;
     min-height: 54px;
-    padding: 12px 24px;
-    border-radius: 16px;
-    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.875rem;
     font-weight: 600;
     -webkit-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, -webkit-transform 0.3s ease;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, -webkit-transform 0.3s ease;
