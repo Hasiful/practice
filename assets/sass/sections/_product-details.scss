@@ -1,9 +1,4 @@
 .product-details {
-  background:
-    radial-gradient(circle at top, hsl(var(--white) / 0.08), transparent 30%),
-    linear-gradient(180deg, hsl(var(--black)) 0%, hsl(0 0% 4%) 100%);
-  color: hsl(var(--white));
-
   &__story {
     position: relative;
     padding: 72px 0 88px;

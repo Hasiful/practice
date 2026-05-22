@@ -1,0 +1,174 @@
+@@include('../layout/_template-top.html')
+@@include('../layout/_header.html')
+<main>
+  <div class="my-60 cart">
+    <div class="container">
+      <div class="cart-wrapper">
+        <div class="cart-wrapper__left">
+          <div class="cart-body">
+            <div class="cart-list d-none">
+              <div class="empty-message">
+                <div class="empty-message-icon">
+                  <img src="assets/images/empty_cart.png" alt="img">
+                </div>
+                <p class="empty-message-text">No items found</p>
+                <a href="" class="btn btn-outline--base btn--sm mt-3"
+                  >View Products</a
+                >
+              </div>
+            </div>
+
+            <!-- Cart Items List -->
+            <ul class="cart-list cartItemsList">
+              @@for(let i = 6; i > 0; i--){
+              <li class="cart-list-item singleCartItem" data-id="178">
+                <a class="cart-list-item__thumb" href="product-details.html">
+                  <img src="assets/images/products/`+i+`.png" alt="img">
+                </a>
+                <div class="cart-list-item__content">
+                  <div class="cart-list-item__content-top">
+                    <h2 class="cart-list-item__title h6">
+                      <a href="product-details.html"
+                        >New Women's Square Collar Pleated Long Dresses</a
+                      >
+                    </h2>
+                    <h2 class="cart-list-item__price h6">
+                      <span class="discount">$10.00</span>
+                    </h2>
+                  </div>
+                  <div class="cart-list-item__content-middle">
+                    <div class="cart-list-item__variation">
+                      <div class="cart-list-item__info">
+                        <a href="products.html">Arts &amp; Literature</a>
+                      </div>
+                    </div>
+                    <div class="cart-list-item__content-info">
+                      <ul class="list">
+                        <li>
+                          <span>Subtotal:</span>
+                          <span class="itemSubtotal text-muted">$10.00</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cart-list-item__content-bottom">
+                    <ul class="qnty-cart-list">
+                      <li class="qnty-cart-list__item">
+                        <div class="product-qty">
+                          <button
+                            type="button"
+                            class="product-qty__btn product-qty__decrement minusQty"
+                          >
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <input
+                            type="number"
+                            class="product-qty__value product-qty__btn quantityInput"
+                            min="1"
+                            value="1">
+                          <button
+                            type="button"
+                            class="product-qty__btn product-qty__increment plusQty"
+                          >
+                            <i class="las la-plus"></i>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="cart-list-item__action">
+                      <button
+                        class="cart-list-item__action-btn removeCartItem"
+                        data-id="178"
+                        type="button"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-trash2-icon lucide-trash-2"
+                        >
+                          <path d="M10 11v6"></path>
+                          <path d="M14 11v6"></path>
+                          <path
+                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"
+                          ></path>
+                          <path d="M3 6h18"></path>
+                          <path
+                            d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          ></path>
+                        </svg>
+                      </button>
+                      <button
+                        class="cart-list-item__action-btn addToWishList"
+                        data-id="12"
+                        type="button"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-heart-icon lucide-heart"
+                        >
+                          <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+        <div class="cart-wrapper__right">
+          <div class="checkout-information">
+            <h3 class="title mb-3">Summary</h3>
+            <div class="cartSummarySection">
+              <div
+                class="promo-code-form d-flex align-items-stretch gap-2 mb-4"
+              >
+                <input
+                  type="text"
+                  name="search"
+                  class="form-control md-style form--control animated-placeholder applyCouponInput"
+                  placeholder="Apply promo code..."
+                  autocomplete="off"
+                  id="search">
+                <button
+                  type="submit"
+                  class="btn btn--base btn--md input-group-text applyCouponButton"
+                >
+                  Apply
+                </button>
+              </div>
+
+              <ul class="checkout-information__list">
+                <li><span>Subtotal</span> <span>$0.00 USD</span></li>
+                <li><span>Total Items</span> <span>0</span></li>
+              </ul>
+              <div class="checkout-information__total">
+                <span>Total</span> <span>$0.00 USD</span>
+              </div>
+              <a href="" class="btn--base btn btn--md w-100">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+@@include('../layout/_footer.html') @@include('../layout/_template-bottom.html')

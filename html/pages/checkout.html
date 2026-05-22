@@ -1,0 +1,285 @@
+@@include('../layout/_template-top.html')
+@@include('../layout/_header.html')
+<main>
+  <section class="my-60 checkout">
+    <div class="container">
+      <div class="checkout-wrapper">
+        <div class="cart-wrapper__left">
+          <h2 class="cart-header__title h5 mb-4">Shopping Address</h2>
+          <form action="#" method="POST">
+            <div class="row">
+              <div class="col-lg-6">
+                <label class="form--label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control form--control md-style"
+                  value=""
+                  name="firstname"
+                  required=""
+                  id="firstname">
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form--label required" for="lastname"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form--control md-style"
+                    value=""
+                    name="lastname"
+                    required=""
+                    id="lastname">
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="form--label required">Email</label>
+                  <input
+                    type="email"
+                    class="form-control form--control md-style"
+                    value=""
+                    name="email"
+                    required="">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form--label required" for="country"
+                    >Country</label
+                  >
+                  <select
+                    name="country"
+                    id="country"
+                    class="form-control form-select form--control"
+                  >
+                    <option
+                      data-mobile_code="93"
+                      value="Afghanistan"
+                      data-code="AF"
+                    >
+                      Afghanistan
+                    </option>
+                    <option
+                      data-mobile_code="263"
+                      value="Zimbabwe"
+                      data-code="ZW"
+                    >
+                      Zimbabwe
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form--label required">Mobile</label>
+                  <div class="input-group">
+                    <span class="input-group-text mobile-code">+93</span>
+                    <input type="hidden" name="mobile_code" value="93">
+                    <input type="hidden" name="country_code" value="AF">
+                    <input
+                      type="number"
+                      name="mobile"
+                      value=""
+                      class="form-control form--control md-style checkUser"
+                      required="">
+                  </div>
+                  <small class="text--danger mobileExist"></small>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form--label" for="city">City</label>
+                  <input
+                    type="text"
+                    value=""
+                    class="form-control form--control md-style"
+                    name="city"
+                    id="city">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form--label" for="zip">Zip Code</label>
+                  <input
+                    type="text"
+                    value=""
+                    class="form-control form--control md-style"
+                    name="zip"
+                    id="zip">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form--label" for="state">State</label>
+                  <input
+                    type="text"
+                    value=""
+                    class="form-control form--control md-style"
+                    name="state"
+                    id="state">
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="form--label" for="address">Address</label>
+                  <textarea
+                    class="form-control form--control md-style"
+                    name="address"
+                    id="address"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form--label" for="shipping_zone_id"
+                    >Shipping Zone</label
+                  >
+                  <select
+                    class="form-control form--control md-style form-select"
+                    name="shipping_zone_id"
+                    id="shipping_zone_id"
+                  >
+                    <option value="">Select a shipping zone</option>
+                    <option value="1">Dhaka</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="render-shipping-zones">
+                  <div class="row gy-4">
+                    <div class="col-lg-6">
+                      <div class="shipping-method-wrapper">
+                        <div class="form-check form--radio flex-grow-1">
+                          <label class="form-check-label" for="shippingRadio_1">
+                            <input
+                              data-amount="10"
+                              id="shippingRadio_1"
+                              class="form-check-input"
+                              type="radio"
+                              value="1"
+                              name="shipping_rate_id">
+                            <span class="shipping-content">
+                              <span class="shipping-content__left">
+                                <span class="title mb-2">Fast Courier</span>
+                                <span>Delivery in 1 days</span>
+                              </span>
+                              <span class="shipping-content__right">
+                                <span class="amount mb-0">$10.00 USD</span>
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="shipping-method-wrapper">
+                        <div class="form-check form--radio flex-grow-1">
+                          <label class="form-check-label" for="shippingRadio_2">
+                            <input
+                              data-amount="10"
+                              id="shippingRadio_2"
+                              class="form-check-input"
+                              type="radio"
+                              value="1"
+                              name="shipping_rate_id">
+                            <span class="shipping-content">
+                              <span class="shipping-content__left">
+                                <span class="title mb-2">Express Shipping</span>
+                                <span>Delivery in 5 days</span>
+                              </span>
+                              <span class="shipping-content__right">
+                                <span class="amount mb-0">$10.00 USD</span>
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn--base w-100">
+                  Place Order
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="cart-wrapper__right">
+          <div class="checkout-information">
+            <h2 class="title mb-4 h5">Your Cart</h2>
+            <div class="checkout-product__wrapper">
+              <div class="checkout-product__item">
+                <div class="checkout-product__item__thumb">
+                  <img src="assets/images/products/1.png" alt="img">
+                </div>
+                <div class="checkout-product__item__right">
+                  <div class="checkout-product__item__content">
+                    <h3 class="title mb-1">
+                      Camera Lucida: Reflections on Photography
+                    </h3>
+                    <p class="tag">Arts &amp; Literature</p>
+                  </div>
+                  <p class="price mb-0">$10.00 USD</p>
+                </div>
+              </div>
+              <div class="checkout-product__item">
+                <div class="checkout-product__item__thumb">
+                  <img src="assets/images/products/2.png" alt="img">
+                </div>
+                <div class="checkout-product__item__right">
+                  <div class="checkout-product__item__content">
+                    <h3 class="title mb-1">
+                      Camera Lucida: Reflections on Photography
+                    </h3>
+                    <p class="tag">Arts &amp; Literature</p>
+                  </div>
+                  <p class="price mb-0">$10.00 USD</p>
+                </div>
+              </div>
+              <div class="checkout-product__item">
+                <div class="checkout-product__item__thumb">
+                  <img src="assets/images/products/3.png" alt="img">
+                </div>
+                <div class="checkout-product__item__right">
+                  <div class="checkout-product__item__content">
+                    <h3 class="title mb-1">
+                      Camera Lucida: Reflections on Photography
+                    </h3>
+                    <p class="tag">Arts &amp; Literature</p>
+                  </div>
+                  <p class="price mb-0">$10.00 USD</p>
+                </div>
+              </div>
+            </div>
+
+            <ul class="checkout-information__list">
+              <li><span>Subtotal</span> <span>$30.00 USD</span></li>
+              <li class="shipping-charge-container">
+                <span>Delivery fee</span> <span class="amount">$10.00 USD</span>
+              </li>
+            </ul>
+            <div class="checkout-information__total total-container">
+              <span>Total</span>
+              <span data-amount="30" class="amount">$40.00 USD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+@@include('../layout/_footer.html') @@include('../layout/_template-bottom.html')
