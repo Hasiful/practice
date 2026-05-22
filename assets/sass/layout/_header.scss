@@ -120,7 +120,6 @@
 /* ============================== Small Device ======================= */
 .header {
   @include lg-screen {
-    overflow: hidden;
 
     .nav-menu {
       .nav-item {

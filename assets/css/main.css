@@ -1482,10 +1482,6 @@ button:focus {
 /* ========================== Desktop Device End ========================= */
 /* ============================== Small Device ======================= */
 @media screen and (max-width: 1199px) {
-    .header {
-        overflow: hidden;
-    }
-
     .header .nav-menu .nav-item {
         text-align: left;
         display: block;
