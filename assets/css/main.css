@@ -3103,6 +3103,57 @@ body:not(:has(.banner-section, .product-details)) main {
     color: hsl(var(--white));
 }
 
+.product-details-show__product-info {
+    display: grid;
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+    gap: 14px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+@media screen and (max-width: 575px) {
+    .product-details-show__product-info {
+        gap: 12px;
+    }
+}
+
+.product-details-show__product-thumb {
+    width: clamp(96px, 18vw, 120px);
+    height: clamp(96px, 18vw, 120px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid hsl(var(--white)/0.1);
+    background: -webkit-gradient(linear, left top, left bottom, from(hsl(var(--white)/0.12)), to(hsl(var(--white)/0.04)));
+    background: linear-gradient(180deg, hsl(var(--white)/0.12), hsl(var(--white)/0.04));
+    -webkit-box-shadow: inset 0 1px 0 hsl(var(--white)/0.08);
+    box-shadow: inset 0 1px 0 hsl(var(--white)/0.08);
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.product-details-show__product-thumb img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: block;
+}
+
+.product-details-show__product-copy {
+    min-width: 0;
+}
+
 .product-details-show__stock {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -3128,9 +3179,15 @@ body:not(:has(.banner-section, .product-details)) main {
     color: hsl(var(--white));
 }
 
+@media screen and (max-width: 575px) {
+    .product-details-show__title {
+        font-size: 18px;
+    }
+}
+
 .product-details-show__brand {
     display: inline-block;
-    margin-bottom: 18px;
+    margin-bottom: 0;
     color: hsl(var(--white)/0.78);
     font-family: var(--text-font);
     font-size: 14px;
