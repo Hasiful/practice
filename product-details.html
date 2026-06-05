@@ -191,29 +191,76 @@
 
 <main>
     <div class="product-details">
-        <section class="product-show bg-img  wow fadeInUp" data-wow-delay="0.2s">
-            <div class="product-show-bg">
-                <img class="fit-image" src="assets/images/thumbs/bg-1.png" alt="">
-            </div>
-
+        <section class="product-details-show wow fadeInUp" data-wow-delay="0.2s">
             <div class="container">
-                <div class="show-item">
-                    <h5 class="show-item-price mb-2">$199.99</h5>
-                    <div class="show-item-wrapper">
-                        <div class="show-item-content">
-                            <p class="show-item-title">
+                <div class="product-details-show__shell">
+                    <div class="product-details-show__visual">
+                        <div class="product-details-show__video-stage">
+                            <video class="product-details-show__video" autoplay muted loop playsinline preload="metadata">
+                                <source src="assets/images/thumbs/product.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="product-details-show__purchase-card">
+                            <div class="product-details-show__price-row">
+                                <h5 class="product-details-show__price">$199.99</h5>
+                            </div>
+
+                            <p class="product-details-show__title">
                                 Beats Studio3 Wireless Over-Ear Headphones
                             </p>
-                            <a href="" class="show-item-brand">w/ Brand Ambassador Milli.</a>
-                        </div>
-                        <div class="show-item-thumb">
-                            <img src="assets/images/products/headphone.png" alt="">
+                            <a href="" class="product-details-show__brand">w/ Brand Ambassador Milli.</a>
+
+                            <div class="product-details-show__selectors">
+                                <label class="product-details-show__field">
+                                    <span class="product-details-show__label">Product Variant</span>
+                                    <span class="product-details-show__select-shell">
+                                        <select class="product-details-show__select" aria-label="Product Variant">
+                                            <option>Standard Edition</option>
+                                            <option>Collector Edition</option>
+                                            <option>Studio Edition</option>
+                                            <option>Midnight Edition</option>
+                                        </select>
+                                    </span>
+                                </label>
+
+                                <label class="product-details-show__field">
+                                    <span class="product-details-show__label">Color</span>
+                                    <span class="product-details-show__select-shell">
+                                        <select class="product-details-show__select" aria-label="Product Color">
+                                            <option>Graphite Black</option>
+                                            <option>Silver Mist</option>
+                                            <option>Sand Beige</option>
+                                            <option>Ocean Blue</option>
+                                        </select>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <a href="" class="product-details-show__btn">Shop Now</a>
                         </div>
                     </div>
 
-            <a href="" class="show-item-btn">Shop Now</a>
-        </div>
-    </div>
+                    <div class="product-details-show__gallery" aria-label="Product image gallery">
+                        <figure class="product-details-show__card product-details-show__card--tall">
+                            <img src="assets/images/products/1.png" alt="Product image preview one">
+                            <figcaption>Edition One</figcaption>
+                        </figure>
+                        <figure class="product-details-show__card">
+                            <img src="assets/images/products/2.png" alt="Product image preview two">
+                            <figcaption>Texture Detail</figcaption>
+                        </figure>
+                        <figure class="product-details-show__card">
+                            <img src="assets/images/products/3.png" alt="Product image preview three">
+                            <figcaption>Core Angle</figcaption>
+                        </figure>
+                        <figure class="product-details-show__card">
+                            <img src="assets/images/products/4.png" alt="Product image preview four">
+                            <figcaption>Final Finish</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="product-details__story">
