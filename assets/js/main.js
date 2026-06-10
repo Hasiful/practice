@@ -45,6 +45,10 @@
       slidesPerView: "auto",
       spaceBetween: 60,
       loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       coverflowEffect: {
         rotate: 0,
         stretch: 120,
@@ -54,9 +58,6 @@
       },
       keyboard: {
         enabled: true,
-      },
-      mousewheel: {
-        thresholdDelta: 70,
       },
       pagination: {
         el: ".swiper-pagination",

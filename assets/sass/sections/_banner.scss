@@ -4,6 +4,7 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  padding-block: calc(var(--inner-p) + var(--header-h)) var(--inner-p);
 
   &::after{
     content: "";
@@ -20,24 +21,19 @@ body:not(:has(.banner-section, .product-details)) main{
 
 .banner-wrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 60px;
   justify-content: center;
-}
-
-.banner-thumb {
-  flex: 1;
-  transform: scale(1.25);
-  transform-origin: bottom left;
 }
 
 /* =========================== Banner Section End Here ========================= */
 
 .banner-slider {
   width: 100%;
-  padding-block: calc(var(--inner-p) + var(--header-h)) var(--inner-p);
   width: 764px;
   margin: 0;
+  padding-block: 20px;
+
 
   @include xl-screen {
     width: 640px;
@@ -88,15 +84,17 @@ body:not(:has(.banner-section, .product-details)) main{
 
 .banner-slider .swiper-button-next,
 .banner-slider .swiper-button-prev {
-  position: unset;
   width: 32px;
   height: 32px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: hsl(var(--white) / .1);
+  background: hsl(var(--black) / .4);
   color: hsl(var(--white));
   font-size: 0.75rem;
   margin: 0;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.3s;
 
   @include msm-screen {
     width: 30px;
@@ -108,30 +106,11 @@ body:not(:has(.banner-section, .product-details)) main{
   }
 }
 
-.banner-slider {
-  .swiper-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding-top: 32px;
-  }
-
-  .swiper-pagination {
-    position: unset;
-    max-width: 200px;
-    border-radius: 999px;
-  }
-
-  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-    background: hsl(var(--base));
-    border-radius: 999px;
-  }
-
-  .swiper-pagination-progressbar {
-    background: rgb(255 255 255 / 25%);
-  }
+.banner-slider:hover .swiper-button-next,
+.banner-slider:hover .swiper-button-prev {
+  opacity: 1;
 }
+
 
 .banner-section {
   .swiper-3d .swiper-slide-shadow-left,

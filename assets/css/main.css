@@ -2090,6 +2090,7 @@ body::after {
     overflow: hidden;
     position: relative;
     z-index: 1;
+    padding-block: calc(var(--inner-p) + var(--header-h)) var(--inner-p);
 }
 
 .banner-section::after {
@@ -2108,31 +2109,21 @@ body:not(:has(.banner-section, .product-details)) main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 60px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
 }
 
-.banner-thumb {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    -webkit-transform: scale(1.25);
-    transform: scale(1.25);
-    -webkit-transform-origin: bottom left;
-    transform-origin: bottom left;
-}
-
 /* =========================== Banner Section End Here ========================= */
 .banner-slider {
     width: 100%;
-    padding-block: calc(var(--inner-p) + var(--header-h)) var(--inner-p);
     width: 764px;
     margin: 0;
+    padding-block: 20px;
 }
 
 @media screen and (max-width: 1399px) {
@@ -2207,16 +2198,20 @@ body:not(:has(.banner-section, .product-details)) main {
 
 .banner-slider .swiper-button-next,
 .banner-slider .swiper-button-prev {
-    position: unset;
     width: 32px;
     height: 32px;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     border-radius: 50%;
-    background: hsl(var(--white)/0.1);
+    background: hsl(var(--black)/0.4);
     color: hsl(var(--white));
     font-size: 0.75rem;
     margin: 0;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 @media screen and (max-width: 575px) {
@@ -2232,33 +2227,9 @@ body:not(:has(.banner-section, .product-details)) main {
     display: none;
 }
 
-.banner-slider .swiper-arrow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 16px;
-    padding-top: 32px;
-}
-
-.banner-slider .swiper-pagination {
-    position: unset;
-    max-width: 200px;
-    border-radius: 999px;
-}
-
-.banner-slider .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-    background: hsl(var(--base));
-    border-radius: 999px;
-}
-
-.banner-slider .swiper-pagination-progressbar {
-    background: rgba(255, 255, 255, 0.25);
+.banner-slider:hover .swiper-button-next,
+.banner-slider:hover .swiper-button-prev {
+    opacity: 1;
 }
 
 .banner-section .swiper-3d .swiper-slide-shadow-left,
@@ -2750,9 +2721,9 @@ body:not(:has(.banner-section, .product-details)) main {
     color: hsl(var(--white));
     height: 40px;
     padding-inline: 16px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
