@@ -2,7 +2,7 @@
 
 
   .navbar{
-    padding: 4px 24px;
+    padding: 10px 24px;
     background-color: hsl(var(--white)/0.05);
     border-radius: 12px;
     backdrop-filter: blur(10px);
@@ -10,7 +10,7 @@
     width: 100%;
     margin-inline: auto;
 
-    @include lg-screen{
+    @include msm-screen{
       padding: 16px;
     }
   }
@@ -46,7 +46,7 @@
   }
 
   .offcanvas {
-    @include lg-screen {
+    @include msm-screen {
       min-height: 100vh;
     }
   }
@@ -66,7 +66,7 @@
 
 /* ========================= Desktop Device Start ========================= */
 .header {
-  @media (min-width: 1200px) {
+  @media (min-width: 575px) {
     .offcanvas-body {
       height: 100%;
       justify-content: center;
@@ -75,7 +75,6 @@
     .nav-menu {
       .nav-item {
         padding-right: 6px;
-        padding-block: 16px;
 
         &:last-child {
           padding-right: 0;
@@ -119,7 +118,7 @@
 
 /* ============================== Small Device ======================= */
 .header {
-  @include lg-screen {
+  @include msm-screen {
 
     .nav-menu {
       .nav-item {
@@ -204,22 +203,6 @@
   }
 }
 
-.header-right {
-  --gap: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--gap);
-
-  @include lg-screen{
-    flex: 1;
-  }  
-}
-
-.header-right-item{
-  color: hsl(var(--white));
-}
-
 .header {
   .offcanvas-header {
     background-color: hsl(var(--black) / 0.05);
@@ -234,6 +217,19 @@
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
 
+.header-right-item{
+  color: hsl(var(--white));
+  display: flex;
+
+  &.bag-icon{
+    border-left: 1px solid hsl(var(--white) / 0.1);
+    padding-left: 16px;
+  }
+  &.bar-icon{
+    border-right: 1px solid hsl(var(--white) / 0.1);
+    padding-right: 16px;
+  }
+}
 
 
 /* ================================= Header Css End =========================== */

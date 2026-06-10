@@ -1402,7 +1402,7 @@ body::after {
 /* ================================= Button Css End =========================== */
 /* ============= Header Start Here ======================= */
 .navbar {
-    padding: 4px 24px;
+    padding: 10px 24px;
     background-color: hsl(var(--white)/0.05);
     border-radius: 12px;
     -webkit-backdrop-filter: blur(10px);
@@ -1412,7 +1412,7 @@ body::after {
     margin-inline: auto;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 575px) {
     .navbar {
         padding: 16px;
     }
@@ -1454,7 +1454,7 @@ body::after {
     width: 100%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 575px) {
     .header .offcanvas {
         min-height: 100vh;
     }
@@ -1488,7 +1488,7 @@ body::after {
     }
 }
 /* ========================= Desktop Device Start ========================= */
-@media (min-width: 1200px) {
+@media (min-width: 575px) {
     .header .offcanvas-body {
         height: 100%;
         -webkit-box-pack: center;
@@ -1498,7 +1498,6 @@ body::after {
 
     .header .nav-menu .nav-item {
         padding-right: 6px;
-        padding-block: 16px;
     }
 
     .header .nav-menu .nav-item:last-child {
@@ -1536,7 +1535,7 @@ body::after {
 
 /* ========================== Desktop Device End ========================= */
 /* ============================== Small Device ======================= */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 575px) {
     .header .nav-menu .nav-item {
         text-align: left;
         display: block;
@@ -1625,32 +1624,6 @@ body::after {
     content: "\f00d";
 }
 
-.header-right {
-    --gap: 24px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    gap: var(--gap);
-}
-
-@media screen and (max-width: 1199px) {
-    .header-right {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-    }
-}
-
-.header-right-item {
-    color: hsl(var(--white));
-}
-
 .header .offcanvas-header {
     background-color: hsl(var(--black)/0.05);
 }
@@ -1661,6 +1634,23 @@ body::after {
 
 .btn-close {
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+
+.header-right-item {
+    color: hsl(var(--white));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.header-right-item.bag-icon {
+    border-left: 1px solid hsl(var(--white)/0.1);
+    padding-left: 16px;
+}
+
+.header-right-item.bar-icon {
+    border-right: 1px solid hsl(var(--white)/0.1);
+    padding-right: 16px;
 }
 
 /* ================================= Header Css End =========================== */
