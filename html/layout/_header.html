@@ -1,64 +1,83 @@
 <!-- ==================== Header Start Here ==================== -->
 <header class="header" id="header">
   <div class="container">
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-light header-navbar">
       <button
-        class="navbar-toggler header-button"
+        class="header-right-item bar-icon header-menu-trigger"
         type="button"
         data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar"
-        aria-label="Toggle navigation"
+        data-bs-target="#headerSidebar"
+        aria-controls="headerSidebar"
+        aria-label="Open menu"
       >
-        <span id="hiddenNav"><i class="las la-bars"></i></span>
+        @@include('../svg/barIcon.html')
       </button>
 
-      <div
-        class="offcanvas border-0 offcanvas-end"
-        tabindex="-1"
-        id="offcanvasDarkNavbar"
-      >
-        <div class="offcanvas-header">
-          <a class="logo navbar-brand" href="index.html">
-            <h2 class="logo-text">Nothing (R)</h2>
-          </a>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body justify-content-center">
-          <ul class="navbar-nav w-100 nav-menu align-items-sm-center">
-          <li class="nav-item">
-                <a href="#" class="header-right-item bar-icon">
-                  @@include('../svg/barIcon.html')
-                </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Shop</a>
-            </li>
+      <p class="nav-item nav-item d-none d-sm-block">
+        <a class="nav-link" aria-current="page" href="index.html">Shop</a>
+      </p>
 
-            <li class="logo-view">
-              <a  href="index.html">
-                <h2 class="logo-text">Nothing (R)</h2>
-              </a>
-            </li>
+      <a class="logo-view" href="index.html" aria-label="Go to home">
+        <h2 class="logo-text">Nothing (R)</h2>
+      </a>
 
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Account</a>
-            </li>
+        <p class="nav-item d-none d-sm-block">
+          <a class="nav-link" aria-current="page" href="index.html">Account</a>
+        </p>
 
-            <li class="nav-item">
-                <a href="#" class="header-right-item bag-icon">
-                  @@include('../svg/bagIcon.html')
-                </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <a href="#" class="header-right-item bag-icon" aria-label="Open cart">
+        @@include('../svg/bagIcon.html')
+      </a>
     </nav>
+  </div>
+
+  <div
+    class="offcanvas offcanvas-start header-sidebar"
+    tabindex="-1"
+    id="headerSidebar"
+    aria-labelledby="headerSidebarLabel"
+  >
+    <div class="offcanvas-header header-sidebar__header">
+      <a class="logo navbar-brand" href="index.html" id="headerSidebarLabel">
+        <h2 class="logo-text">Nothing (R)</h2>
+      </a>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <div class="offcanvas-body header-sidebar__body">
+      <p class="header-sidebar__eyebrow">Menu</p>
+      <ul class="header-sidebar__menu">
+        <li class="header-sidebar__item">
+          <a class="header-sidebar__link active" href="index.html">Home</a>
+        </li>
+        <li class="header-sidebar__item">
+          <a class="header-sidebar__link" href="shop.html">Shop</a>
+        </li>
+        <li class="header-sidebar__item">
+          <a class="header-sidebar__link" href="shop.html">Offers</a>
+        </li>
+        <li class="header-sidebar__item">
+          <a class="header-sidebar__link" href="product-details.html">Products</a>
+        </li>
+        <li class="header-sidebar__item">
+          <a class="header-sidebar__link" href="cart.html">Cart</a>
+        </li>
+        <li class="header-sidebar__item">
+          <a class="header-sidebar__link" href="checkout.html">Checkout</a>
+        </li>
+        <li class="header-sidebar__item">
+          <a class="header-sidebar__link" href="contact.html">Contact</a>
+        </li>
+        <li class="header-sidebar__item">
+          <a class="header-sidebar__link" href="policy.html">Policy</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
 <!-- ==================== Header End Here ==================== -->
