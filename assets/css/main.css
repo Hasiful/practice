@@ -1819,18 +1819,46 @@ button:focus {
     transition: all linear 0.2s;
     text-align: center;
     text-transform: uppercase;
-    padding: 14px;
+    padding: 14px 52px 14px 14px;
     background-color: hsl(var(--white)/0.03);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     display: block;
     border-radius: 12px;
+    position: relative;
+}
+
+.footer-menu__link .footer-menu__icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: hsl(var(--white));
+    pointer-events: none;
+    -webkit-transition: -webkit-transform linear 0.2s;
+    transition: -webkit-transform linear 0.2s;
+    transition: transform linear 0.2s;
+    transition: transform linear 0.2s, -webkit-transform linear 0.2s;
 }
 
 .footer-menu__link:hover {
     color: hsl(var(--white));
     text-decoration: none;
-    padding-left: 3px;
+}
+
+.footer-menu__link:hover .footer-menu__icon {
+    -webkit-transform: translate(3px, -50%);
+    transform: translate(3px, -50%);
 }
 
 @media screen and (max-width: 1199px) {
@@ -2729,7 +2757,7 @@ body:not(:has(.banner-section, .product-details)) main {
 
 .all-product-wrapper {
     --count: 5;
-    --gap: 16px;
+    --gap: 48px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2741,6 +2769,7 @@ body:not(:has(.banner-section, .product-details)) main {
 @media screen and (max-width: 1399px) {
     .all-product-wrapper {
         --count: 4;
+        --gap: 32px;
     }
 }
 
@@ -2753,25 +2782,25 @@ body:not(:has(.banner-section, .product-details)) main {
 @media screen and (max-width: 991px) {
     .all-product-wrapper {
         --count: 2;
+        --gap: 24px;
     }
 }
 
 @media screen and (max-width: 575px) {
     .all-product-wrapper {
         --count: 1;
+        --gap: 16px;
     }
 }
 
 .product-card {
-    --inner-p: 12px;
     width: calc(100% / var(--count) - (var(--gap) - var(--gap) / var(--count)));
-    padding: var(--inner-p);
-    border-radius: 12px;
     position: relative;
-    background-color: hsl(var(--black)/0.05);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--white)/0.05);
+}
+
+.product-card:hover .product-card-thumb {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .product-card-thumb {
@@ -2787,6 +2816,8 @@ body:not(:has(.banner-section, .product-details)) main {
     margin-bottom: 10px;
     padding: 16px;
     border-radius: 12px;
+    -webkit-transition: all linear 0.3s;
+    transition: all linear 0.3s;
 }
 
 .product-card-thumb img {
@@ -2859,75 +2890,6 @@ body:not(:has(.banner-section, .product-details)) main {
     border: 1px solid hsl(var(--base));
     color: hsl(var(--white));
     background-color: hsl(var(--base));
-}
-
-.best-product-wrapper {
-    --count: 3;
-    --gap: 16px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: var(--gap);
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-@media screen and (max-width: 1399px) {
-    .best-product-wrapper {
-        --count: 2;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .best-product-wrapper {
-        --count: 1;
-    }
-}
-
-.best-product-wrapper .product-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 12px;
-    --thumb-w: 180px;
-}
-
-.best-product-wrapper .product-card-thumb {
-    width: var(--thumb-w);
-    margin: 0;
-}
-
-.best-product-wrapper .product-card-thumb img {
-    max-height: 120px;
-}
-
-.best-product-wrapper .product-card-body {
-    width: calc(100% - var(--thumb-w));
-    text-align: left;
-}
-
-.best-product-wrapper .product-card-category {
-    font-size: 0.8125rem;
-}
-
-.best-product-wrapper .product-card-title {
-    margin-bottom: 20px;
-}
-
-.best-product-wrapper .product-card-rating {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    margin-bottom: 6px;
-}
-
-.best-product-wrapper .product-card-price {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
 }
 
 .product-details {

@@ -1,12 +1,13 @@
 .all-product-wrapper {
   --count: 5;
-  --gap: 16px;
+  --gap: 48px;
   display: flex;
   gap: var(--gap);
   flex-wrap: wrap;
 
   @include xl-screen {
     --count: 4;
+      --gap: 32px;
   }
 
   @include lg-screen {
@@ -15,22 +16,26 @@
 
   @include md-screen {
     --count: 2;
+      --gap: 24px;
   }
 
   @include msm-screen {
     --count: 1;
+      --gap: 16px;
   }
 }
 
 .product-card {
-  --inner-p: 12px;
   width: calc(100% / var(--count) - (var(--gap) - var(--gap) / var(--count)));
-  padding: var(--inner-p);
-  border-radius: 12px;
   position: relative;
-  background-color: hsl(var(--black) / 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid hsl(var(--white) / 0.05);
+
+  &:hover{
+    .product-card{
+      &-thumb{
+        transform: scale(1.1);
+      }
+    }
+  }
 
 
   &-thumb {
@@ -40,6 +45,7 @@
     margin-bottom: 10px;
     padding: 16px;
     border-radius: 12px;
+    transition: all linear 0.3s;
 
     img {
       max-height: 180px;
@@ -102,55 +108,3 @@
   }
 }
 
-.best-product-wrapper {
-  --count: 3;
-  --gap: 16px;
-  display: flex;
-  gap: var(--gap);
-  flex-wrap: wrap;
-
-  @include xl-screen {
-    --count: 2;
-  }
-
-  @include md-screen {
-    --count: 1;
-  }
-
-  .product-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    --thumb-w: 180px;
-
-    &-thumb {
-      width: var(--thumb-w);
-      margin: 0;
-      img {
-        max-height: 120px;
-      }
-    }
-
-    &-body {
-      width: calc(100% - var(--thumb-w));
-      text-align: left;
-    }
-
-    &-category {
-      font-size: 0.8125rem;
-    }
-
-    &-title {
-      margin-bottom: 20px;
-    }
-
-    &-rating {
-      justify-content: flex-start;
-      margin-bottom: 6px;
-    }
-
-    &-price {
-      justify-content: flex-start;
-    }
-  }
-}
