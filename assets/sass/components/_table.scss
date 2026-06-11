@@ -14,15 +14,15 @@
   border-spacing: 0px 0px;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid hsl(var(--border-color));
+  border: 1px solid hsl(var(--white) / .1);
 
   thead {
     tr {
       th {
-        background-color: hsl(var(--section-bg));
+        background-color: hsl(var(--white) / .03);
         text-align: left;
         padding: 12px 24px;
-        color: hsl(var(--body-color));
+        color: hsl(var(--white));
         font-weight: 700;
         border-bottom: 0;
         max-width: 220px;
@@ -50,7 +50,7 @@
 
     tr {
       &:nth-child(even) {
-        background-color: hsl(var(--black) / .02);
+        background-color: hsl(var(--white) / .02);
       }
 
       &:last-child {
@@ -77,15 +77,15 @@
         padding: 16px 24px;
         border-width: 1px;
         border: 0;
-        color: hsl(var(--body-color));
+        color: hsl(var(--white));
         max-width: 220px;
         @include fs-15;
-        border-bottom: 1px solid hsl(var(--black) / .05);
+        border-bottom: 1px solid hsl(var(--white) / .05);
         background-color: transparent;
 
         &::before {
           content: attr(data-label);
-          color: hsl(var(--heading-color));
+          color: hsl(var(--white));
           font-weight: 600;
           font-size: rem(14px);
           display: none;
@@ -164,11 +164,11 @@
         display: block;
 
         &:nth-child(even) {
-          background-color: hsl(var(--section-bg) / .4);
+          background-color: hsl(var(--white) / .04);
         }
 
         &:last-child td {
-          border-bottom: 1px solid hsl(var(--black) / .05);
+          border-bottom: 1px solid hsl(var(--white) / .05);
         }
 
         td {
@@ -179,7 +179,7 @@
           text-align: right;
           padding: 16px !important;
           border: none;
-          border-bottom: 1px solid hsl(var(--black) / .05);
+          border-bottom: 1px solid hsl(var(--white) / .05);
           max-width: unset;
           background-color: transparent;
 
@@ -220,77 +220,3 @@
 }
 
 /* ================================= Table Css End =========================== */
-
-.table tbody tr td:has(.empty-message) {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.table tbody tr td:has(.empty-message)::before {
-  display: none;
-}
-
-.empty-message {
-  text-align: center;
-  min-height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.empty-message-icon {
-  max-width: 150px;
-  width: 100%;
-}
-
-.empty-message-text {
-  color: hsl(var(--black)/0.3);
-  font-weight: 500;
-}
-
-
-.dashboard-search-form {
-  position: relative;
-  max-width: 320px;
-  width: 100%;
-
-  &-icon {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: hsl(var(--heading-color));
-    display: flex;
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  .form--control {
-    padding-left: 40px;
-    border-radius: 8px;
-    background: hsl(var(--white));
-    border: 1px solid hsl(var(--border-color));
-
-    &:focus {
-      border-color: hsl(var(--base));
-    }
-
-    &::placeholder {
-      color: hsl(var(--body-color));
-    }
-  }
-}

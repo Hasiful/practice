@@ -7,13 +7,154 @@
   justify-content: center;
   overflow-y: auto;
   overscroll-behavior: contain;
+  padding: 10px;
   background:
-    radial-gradient(circle at top left, hsl(var(--black) / 0.56), transparent 38%),
-    radial-gradient(circle at 88% 22%, hsl(var(--black) / 0.42), transparent 28%),
-    hsl(var(--black) / 0.34);
-  backdrop-filter: blur(18px);
+    radial-gradient(circle at 10% 18%, hsl(var(--black) / 0.84), transparent 18%),
+    radial-gradient(circle at 84% 26%, hsl(var(--black) / 0.72), transparent 14%),
+    radial-gradient(circle at 24% 82%, hsl(var(--black) / 0.44), transparent 16%),
+    linear-gradient(180deg, hsl(var(--white) / 0.08), hsl(var(--black) / 0.32)),
+    hsl(207 12% 82% / 0.92);
+  backdrop-filter: blur(20px) saturate(140%);
   transition:
     opacity 0.38s ease,
     transform 0.38s ease,
     visibility 0.38s ease;
+}
+
+.region-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 488px);
+  min-height: min(calc(100vh - 20px), 832px);
+  margin: auto 0;
+  padding: 212px 24px 84px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, hsl(var(--white) / 0.97), hsl(var(--white) / 0.95));
+  box-shadow:
+    0 40px 80px hsl(var(--black) / 0.28),
+    inset 0 1px 0 hsl(var(--white) / 0.8);
+  color: hsl(var(--black));
+  text-align: center;
+}
+
+
+.region-modal__eyebrow {
+  margin-bottom: 8px;
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 13px;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: hsl(var(--black) / 0.92);
+}
+
+.region-modal__eyebrow--spaced {
+  margin-top: 44px;
+}
+
+.region-modal__country,
+.region-modal__market {
+  margin-bottom: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: hsl(var(--black));
+}
+
+.region-modal__country {
+  font-size: clamp(2.1rem, 3.2vw, 2.72rem);
+  line-height: 1.05;
+}
+
+.region-modal__market {
+  font-size: clamp(1.9rem, 2.9vw, 2.5rem);
+  line-height: 1.08;
+}
+
+.region-modal__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 74px;
+}
+
+.region-modal__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 272px;
+  min-height: 62px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.region-modal__btn--primary {
+  background-color: hsl(var(--black));
+  color: hsl(var(--white));
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 16px 24px hsl(var(--black) / 0.14);
+
+  &:hover {
+    transform: translateY(-1px);
+    color: hsl(var(--white));
+  }
+}
+
+.region-modal__btn--link {
+  min-width: auto;
+  min-height: auto;
+  padding: 0 2px 4px;
+  border-bottom: 1px solid hsl(var(--black) / 0.35);
+  border-radius: 0;
+  color: hsl(var(--black) / 0.66);
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  &:hover {
+    color: hsl(var(--black));
+    transform: translateY(-1px);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .region-modal {
+    padding: 6px;
+  }
+
+  .region-modal__dialog {
+    min-height: calc(100vh - 12px);
+    padding: 180px 18px 68px;
+  }
+
+  .region-modal__icon {
+    top: 184px;
+  }
+
+  .region-modal__eyebrow--spaced {
+    margin-top: 36px;
+  }
+
+  .region-modal__actions {
+    gap: 14px;
+    margin-top: 58px;
+  }
+
+  .region-modal__btn {
+    width: 100%;
+    min-width: 0;
+  }
 }

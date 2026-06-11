@@ -1,9 +1,9 @@
 .cookie-card {
   position: fixed;
-  left: 32px;
+  right: 32px;
   bottom: 32px;
   z-index: 999;
-  width: min(880px, calc(100% - 32px));
+  width: min(420px, calc(100% - 32px));
   opacity: 0;
   visibility: hidden;
   transform: translateY(24px);
@@ -49,15 +49,13 @@
   padding: 16px 18px;
   border-radius: 22px;
   border: 1px solid hsl(var(--white) / 0.12);
-  background:
-    linear-gradient(180deg, hsl(var(--white) / 0.05), hsl(var(--white) / 0.025)),
-    hsl(var(--black) / 0.96);
+  background: hsl(var(--white) / 0.03);
   box-shadow: 0 18px 50px hsl(var(--black) / 0.35);
   backdrop-filter: blur(18px);
+  flex-direction: column;
+  align-items: stretch;
 
   @media screen and (max-width: 767px) {
-    flex-direction: column;
-    align-items: stretch;
     padding: 16px;
   }
 }
@@ -90,14 +88,14 @@
 .cookie-card__title {
   margin-bottom: 4px;
   color: hsl(var(--white));
-  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-size: 1rem;
   line-height: 1.2;
 }
 
 .cookie-card__text {
   margin-bottom: 0;
   color: hsl(var(--white) / 0.66);
-  font-size: 0.95rem;
+  font-size: 0.8125rem;
   line-height: 1.45;
 }
 
@@ -115,11 +113,11 @@
 
 .cookie-card__btn {
   border: 0;
-  min-width: 116px;
-  min-height: 54px;
-  padding: 8px 16px;
+  min-width: 100px;
+  min-height: 48px;
+  padding: 6px 12px;
   border-radius: 12px;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   transition:
     background-color 0.3s ease,

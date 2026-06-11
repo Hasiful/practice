@@ -91,7 +91,25 @@
   </div>
 </div>
 
-    <div class="region-modal"></div>
+    <div class="region-modal" aria-hidden="false">
+      <div class="region-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="region-modal-title">
+        <p class="region-modal__eyebrow">Looks like you're in:</p>
+        <h2 class="region-modal__country" id="region-modal-title">International</h2>
+
+        <p class="region-modal__eyebrow region-modal__eyebrow--spaced">But you're browsing the store for:</p>
+        <h3 class="region-modal__market">Bangladesh</h3>
+
+        <div class="region-modal__actions">
+          <a class="region-modal__btn region-modal__btn--primary" href="#" aria-label="Go to international store">
+            Go to: International
+          </a>
+
+          <a class="region-modal__btn region-modal__btn--link" href="#" aria-label="Stay on United Kingdom store">
+            Stay on Bangladesh
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!--==================== Overlay Start ====================-->
     <div class="body-overlay"></div>
