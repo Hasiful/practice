@@ -2,17 +2,11 @@
 
 .header {
   z-index: 999;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 16px;
-
-  &.fixed-header {
-    transition: 0.3s linear;
-    animation: slide-down 0.8s;
-    width: 100%;
-  }
 }
 
 .header-navbar {
