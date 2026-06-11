@@ -124,6 +124,64 @@
   }
   // ========================= cookie card end =====================
 
+  // ========================= shop refine card start =====================
+  function initializeShopRefineCard() {
+    const refineCard = document.getElementById("shopRefineCard");
+
+    if (!refineCard) {
+      return;
+    }
+
+    const refineToggle = refineCard.querySelector("[data-shop-refine-toggle]");
+    const visibleOffset = 80;
+
+    function expandCard() {
+      refineCard.classList.add("is-expanded");
+      refineToggle.setAttribute("aria-expanded", "true");
+    }
+
+    function collapseCard() {
+      refineCard.classList.remove("is-expanded");
+      refineToggle.setAttribute("aria-expanded", "false");
+    }
+
+    function revealCard() {
+      refineCard.classList.remove("is-hidden");
+      refineCard.setAttribute("aria-hidden", "false");
+    }
+
+    function hideCard() {
+      refineCard.classList.add("is-hidden");
+      refineCard.setAttribute("aria-hidden", "true");
+      collapseCard();
+    }
+
+    function updateCardVisibility() {
+      if (window.scrollY > visibleOffset) {
+        hideCard();
+      } else {
+        revealCard();
+      }
+    }
+
+    refineToggle.addEventListener("click", function () {
+      if (refineCard.classList.contains("is-hidden")) {
+        return;
+      }
+
+      if (refineCard.classList.contains("is-expanded")) {
+        collapseCard();
+      } else {
+        expandCard();
+      }
+    });
+
+    window.addEventListener("scroll", updateCardVisibility, { passive: true });
+    window.addEventListener("resize", updateCardVisibility);
+    updateCardVisibility();
+  }
+  // ========================= shop refine card end =====================
+
   // ==========================================
   //      Start Document Ready function
   // ==========================================
@@ -134,6 +192,7 @@
     initializeSwiper();
     setHeight("--header-h", "header");
     initializeCookieCard();
+    initializeShopRefineCard();
   });
 
   // ========================= Preloader Js Start =====================

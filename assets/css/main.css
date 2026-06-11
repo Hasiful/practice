@@ -5211,5 +5211,173 @@ body:not(:has(.banner-section, .product-details)) main {
 /* ================= Slick Arrow & Dots css Start ================ */
 /* ======================  Plugin Customization End  ======================*/
 /* ======================  Pages Design Start  ======================*/
+.shop-page {
+    position: relative;
+}
+
+.shop-refine-card {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    z-index: 990;
+    width: min(650px, 100vw - 32px);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border: 1px solid hsl(var(--white)/0.1);
+    border-radius: 12px;
+    background: -webkit-gradient(linear, left top, left bottom, from(hsl(var(--white)/0.05)), to(hsl(var(--white)/0.03))), hsl(var(--black)/0.94);
+    background: linear-gradient(180deg, hsl(var(--white)/0.05), hsl(var(--white)/0.03)), hsl(var(--black)/0.94);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.35s ease, visibility 0.35s ease, -webkit-transform 0.35s ease;
+    transition: opacity 0.35s ease, visibility 0.35s ease, -webkit-transform 0.35s ease;
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+.shop-refine-card.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-16px);
+    transform: translateX(-50%) translateY(-16px);
+    pointer-events: none;
+}
+
+.shop-refine-card__panel {
+    max-height: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    overflow: hidden;
+    -webkit-transition: max-height 0.35s ease, opacity 0.25s ease, -webkit-transform 0.35s ease;
+    transition: max-height 0.35s ease, opacity 0.25s ease, -webkit-transform 0.35s ease;
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.35s ease;
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+.shop-refine-card.is-expanded .shop-refine-card__panel {
+    max-height: 220px;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.shop-refine-card__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 12px 14px;
+    padding: 18px 20px 16px;
+}
+
+.shop-refine-card__chip {
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 12px;
+    background-color: transparent;
+    color: hsl(var(--white)/0.5);
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    -webkit-transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+    transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.shop-refine-card__chip:hover, .shop-refine-card__chip:focus-visible {
+    color: hsl(var(--white));
+    background-color: hsl(var(--white)/0.05);
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+}
+
+.shop-refine-card__chip.is-active {
+    color: hsl(var(--white));
+    background-color: hsl(var(--white)/0.06);
+}
+
+.shop-refine-card__chip:nth-child(5), .shop-refine-card__chip:nth-child(6) {
+    grid-column: span 2;
+}
+
+.shop-refine-card__toggle {
+    width: 100%;
+    min-height: 58px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 10px;
+    border: 0;
+    background: transparent;
+    color: hsl(var(--white));
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    -webkit-transition: color 0.25s ease, background-color 0.25s ease;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.shop-refine-card__toggle-icon {
+    -webkit-transition: -webkit-transform 0.25s ease;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.shop-refine-card.is-expanded .shop-refine-card__toggle {
+    border-top: 1px solid hsl(var(--white)/0.08);
+}
+
+.shop-refine-card.is-expanded .shop-refine-card__toggle-icon {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 767px) {
+    .shop-refine-card {
+        top: calc(var(--header-h, 80px) + 12px);
+        width: min(100vw - 20px, 640px);
+        border-radius: 20px;
+    }
+
+    .shop-refine-card__grid {
+        gap: 10px 12px;
+        padding: 16px 14px 14px;
+    }
+
+    .shop-refine-card__chip {
+        min-height: 50px;
+        font-size: 0.8rem;
+    }
+
+    .shop-refine-card__toggle {
+        min-height: 54px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .shop-refine-card__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .shop-refine-card__chip:nth-child(5), .shop-refine-card__chip:nth-child(6) {
+        grid-column: span 1;
+    }
+}
 /* ======================  Pages Design End  ======================*/
 /*# sourceMappingURL=main.css.map */

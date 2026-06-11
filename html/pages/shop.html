@@ -1,6 +1,42 @@
 @@include('../layout/_template-top.html')
 @@include('../layout/_header.html')
-<main>
+<main class="shop-page">
+  <div class="shop-refine-card" id="shopRefineCard" aria-hidden="true">
+    <div class="shop-refine-card__panel">
+      <div class="shop-refine-card__grid" aria-label="Shop filters">
+        <button type="button" class="shop-refine-card__chip is-active"> 5 Panel Caps</button>
+        <button type="button" class="shop-refine-card__chip">6 Panel Caps</button>
+        <button type="button" class="shop-refine-card__chip">Contrast 5 Panel Caps</button>
+        <button type="button" class="shop-refine-card__chip">Contrast 6 Panel Caps</button>
+        <button type="button" class="shop-refine-card__chip">Tote Bags
+</button>
+        <button type="button" class="shop-refine-card__chip">New Drops</button>
+        <button type="button" class="shop-refine-card__chip">Limited Pieces
+</button>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="shop-refine-card__toggle"
+      data-shop-refine-toggle
+      aria-expanded="false"
+      aria-controls="shopRefineCard"
+    >
+      <span>Curate</span>
+      <svg
+        class="shop-refine-card__toggle-icon"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+  </div>
+
   @@include('../sections/_products.html')
 </main>
 @@include('../layout/_footer.html') @@include('../layout/_template-bottom.html')
