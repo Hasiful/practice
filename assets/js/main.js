@@ -134,34 +134,51 @@
 
     const refineToggle = refineCard.querySelector("[data-shop-refine-toggle]");
     const visibleOffset = 80;
+    let lastScrollY = window.scrollY;
+
+    function syncToggleState() {
+      refineToggle.setAttribute(
+        "aria-expanded",
+        refineCard.classList.contains("is-expanded") ? "true" : "false"
+      );
+    }
 
     function expandCard() {
       refineCard.classList.add("is-expanded");
-      refineToggle.setAttribute("aria-expanded", "true");
+      syncToggleState();
     }
 
     function collapseCard() {
       refineCard.classList.remove("is-expanded");
-      refineToggle.setAttribute("aria-expanded", "false");
+      syncToggleState();
     }
 
     function revealCard() {
       refineCard.classList.remove("is-hidden");
       refineCard.setAttribute("aria-hidden", "false");
+      syncToggleState();
     }
 
     function hideCard() {
       refineCard.classList.add("is-hidden");
       refineCard.setAttribute("aria-hidden", "true");
-      collapseCard();
+      syncToggleState();
     }
 
     function updateCardVisibility() {
-      if (window.scrollY > visibleOffset) {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+      const isScrollingUp = currentScrollY < lastScrollY;
+
+      if (currentScrollY <= visibleOffset) {
+        revealCard();
+      } else if (isScrollingDown) {
         hideCard();
-      } else {
+      } else if (isScrollingUp) {
         revealCard();
       }
+
+      lastScrollY = currentScrollY;
     }
 
     refineToggle.addEventListener("click", function () {

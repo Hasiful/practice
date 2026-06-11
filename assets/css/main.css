@@ -5085,6 +5085,31 @@ body:not(:has(.banner-section, .product-details)) main {
     color: hsl(var(--black));
 }
 
+.region-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: auto;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain;
+    background: radial-gradient(circle at top left, hsl(var(--black)/0.56), transparent 38%), radial-gradient(circle at 88% 22%, hsl(var(--black)/0.42), transparent 28%), hsl(var(--black)/0.34);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    -webkit-transition: opacity 0.38s ease, visibility 0.38s ease, -webkit-transform 0.38s ease;
+    transition: opacity 0.38s ease, visibility 0.38s ease, -webkit-transform 0.38s ease;
+    transition: opacity 0.38s ease, transform 0.38s ease, visibility 0.38s ease;
+    transition: opacity 0.38s ease, transform 0.38s ease, visibility 0.38s ease, -webkit-transform 0.38s ease;
+}
+
 /* ======================  Plugin Customization Start  ======================*/
 /* ======================  Select2 Start  ======================*/
 .select2-wrapper {

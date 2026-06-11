@@ -1,0 +1,19 @@
+.region-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background:
+    radial-gradient(circle at top left, hsl(var(--black) / 0.56), transparent 38%),
+    radial-gradient(circle at 88% 22%, hsl(var(--black) / 0.42), transparent 28%),
+    hsl(var(--black) / 0.34);
+  backdrop-filter: blur(18px);
+  transition:
+    opacity 0.38s ease,
+    transform 0.38s ease,
+    visibility 0.38s ease;
+}
