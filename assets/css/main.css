@@ -2911,7 +2911,7 @@ body:not(:has(.banner-section, .product-details)) main {
 
 @media screen and (min-width: 992px) {
     .product-details__banner {
-        grid-template-columns: minmax(0, 300px) minmax(0, 1fr) minmax(0, 300px);
+        grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
@@ -2974,8 +2974,10 @@ body:not(:has(.banner-section, .product-details)) main {
     overflow: hidden;
     border-top: 1px solid hsl(var(--white)/0.12);
     border-bottom: 1px solid hsl(var(--white)/0.12);
+    border-right: 1px solid hsl(var(--white)/0.12);
     padding: 18px 0;
     background: hsl(var(--white)/0.03);
+    border-radius: 0px 12px 12px 0;
 }
 
 @media screen and (max-width: 991px) {
@@ -2998,12 +3000,6 @@ body:not(:has(.banner-section, .product-details)) main {
     left: 0;
     background: -webkit-gradient(linear, left top, right top, from(hsl(var(--black))), to(transparent));
     background: linear-gradient(90deg, hsl(var(--black)) 0%, transparent 100%);
-}
-
-.product-details__banner-track::after {
-    right: 0;
-    background: -webkit-gradient(linear, right top, left top, from(hsl(var(--black))), to(transparent));
-    background: linear-gradient(270deg, hsl(var(--black)) 0%, transparent 100%);
 }
 
 .product-details__banner-marquee {
@@ -3393,8 +3389,8 @@ body:not(:has(.banner-section, .product-details)) main {
 .pd-show__bg img {
     width: 100%;
     height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
     display: block;
 }
 
@@ -3519,13 +3515,18 @@ body:not(:has(.banner-section, .product-details)) main {
 }
 
 .pd-show__forms {
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     gap: 12px;
     margin-bottom: 18px;
 }
 
 .pd-show__field {
     display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .pd-show__label {
@@ -3721,6 +3722,66 @@ body:not(:has(.banner-section, .product-details)) main {
 
     .pd-show__hero {
         width: min(46vw, 400px);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pd-show__side,
+.pd-show__card,
+.pd-show__hero,
+.pd-show__grid {
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transform: unset;
+        transform: unset;
+        width: 100%;
+    }
+
+    .pd-show__hero {
+        padding: 0;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        width: 100%;
+    }
+
+    .pd-show__wrap,
+.pd-show {
+        height: auto;
+    }
+
+    .pd-show__wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pd-show {
+        padding-top: var(--header-h);
+    }
+
+    .pd-show__side--left {
+        display: none;
+    }
+
+    .pd-show__side--right {
+        max-width: 480px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .pd-show__forms {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
 }
 
@@ -5404,11 +5465,8 @@ body:not(:has(.banner-section, .product-details)) main {
     border: 0;
     border-radius: 12px;
     background-color: transparent;
-    color: hsl(var(--white)/0.5);
-    font-family: var(--heading-font);
+    color: hsl(var(--white));
     font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
     -webkit-transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
     transition: color 0.25s ease, background-color 0.25s ease, -webkit-transform 0.25s ease;
     transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
