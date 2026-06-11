@@ -3585,7 +3585,7 @@ body:not(:has(.banner-section, .product-details)) main {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 22px;
+    gap: 60px;
 }
 
 .product-details-show__hero {
